@@ -1,0 +1,36 @@
+@import url(../vendor/normalize.css);
+
+@import url(../block/cards.css);
+
+@import url(../block/footer.css);
+
+@import url(../block/header.css);
+
+@import url(../block/page.css);
+
+@import url(../block/profile.css);
+
+@import url(../vendor/Fonts/font.css);
+
+@media screen and (max-width: 480px) {
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile__info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .profile__description {
+    width: 100%;
+    text-align: center;
+  }
+
+  .profile__add-button {
+    margin: 0;
+    width: 100%;
+  }
+}

@@ -2,11 +2,110 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Around The US" />
+    <meta name="author" content="Phillippe Louis" />
+    <meta name="keywords" content="US, National parks, explore US, parks" />
+    <title>Around The U.S.</title>
+    <link href="./pages/index.css" rel="stylesheet" />
   </head>
-  <body>
-    hey there
+  <body class="page">
+    <div class="page__content">
+      <header class="header page__section">
+        <img src="./images/Logo.svg" alt="Around the U.S.Logo" />
+        <div class="header__line">
+          <img src="./images/Line.png" />
+        </div>
+      </header>
+      <main class="content">
+        <section class="profile page__section">
+          <img
+            src="./images/jacques-cousteau.jpeg"
+            alt="=Avatar"
+            class="profile__image"
+          />
+          <div class="profile__info">
+            <h1 class="profile__title">Jacques Cousteau</h1>
+            <button class="profile__edit-button"></button>
+            <p class="profile__description">Explorer</p>
+          </div>
+          <button class="profile__add-button"></button>
+        </section>
+        <section class="cards page__section">
+          <ul class="card__list">
+            <li class="card">
+              <img
+                src="./images/yosemite-valley.png"
+                class="card__image"
+                alt="Yosemite Valley"
+              />
+              <div class="card__discription">
+                <h2 class="card__title">Yosemite Valley</h2>
+                <button class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="./images/lake-louise.png"
+                class="card__image"
+                alt="Lake Louise"
+              />
+              <div class="card__discription">
+                <h2 class="card__title">Lake Louise</h2>
+                <button class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="./images/bald-mountains.png"
+                class="card__image"
+                alt="Bald Mountains"
+              />
+              <div class="card__discription">
+                <h2 class="card__title">Bald Mountains</h2>
+                <button class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="./images/latemar.png"
+                class="card__image"
+                alt="Latemar"
+              />
+              <div class="card__discription">
+                <h2 class="card__title">Latemar</h2>
+                <button class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="./images/vanoise-national-park.png"
+                class="card__image"
+                alt="Vanoise National Park"
+              />
+              <div class="card__discription">
+                <h2 class="card__title">Vanoise National Park</h2>
+                <button class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="./images/lago-di-braies.png"
+                class="card__image"
+                alt="Lago Di Braies"
+              />
+              <div class="card__discription">
+                <h2 class="card__title">Lago Di Braies</h2>
+                <button class="card__like-button"></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
   </body>
+  <footer class="footer">
+    <p class="footer__copyright">© 2022 Around The U.S.</p>
+  </footer>
 </html>
