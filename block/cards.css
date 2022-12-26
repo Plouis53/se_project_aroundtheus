@@ -57,4 +57,35 @@
   height: 18px;
   border: none;
   cursor: pointer;
+  border: 0;
+  margin: auto 20px auto auto;
+  background-color: rgba(0, 0, 0, 0);
+  transition: ease-in-out 1s;
+}
+
+.card__button:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 544px) {
+  .card {
+    margin: 0 auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 545px) and (max-width: 799px) {
+  .card {
+    width: 90%;
+    margin: 0 auto 0 auto;
+  }
+
+  .card__image {
+    width: 100%;
+    margin: 0;
+  }
+
+  .card__details {
+    width: 100%;
+  }
 }

@@ -66,3 +66,22 @@
   background-position: center;
   margin-right: 24px;
 }
+
+@media screen and (min-width: 800px) and (max-width: 1100px) {
+  .profile {
+    max-width: 720px;
+    grid-template-columns: 130px 440px 150px;
+    padding: 0;
+    margin-top: 38px;
+  }
+
+  .profile__description {
+    margin-left: 30px;
+    max-width: 100%;
+  }
+
+  .profile__edit-button {
+    height: 18px;
+    width: 18px;
+  }
+}
