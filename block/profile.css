@@ -116,14 +116,13 @@
     margin-right: 15px;
   }
   .profile__add-button {
-    width: 282px;
     margin-left: 19px;
     margin-right: 19px;
-    margin-left: auto;
     box-sizing: border-box;
     border: 2px solid #ffffff;
     border-radius: 2px;
-    margin-top: 362px;
+    width: 282px;
+    height: 50px;
   }
 }
 
