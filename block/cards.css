@@ -1,20 +1,16 @@
 .cards {
   margin-top: 30px;
-  padding-left: 200px;
-  padding-right: 200px;
-  /*fonts*/
 }
 
 .card__title {
   font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
   font-size: 24px;
   font-weight: 900;
-  font-style: black;
-  line-height: 29px;
-  line-height: 100%;
+  line-height: 1.2;
   color: black;
-  margin-top: 0;
   margin-bottom: 0;
+  margin-top: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -22,11 +18,13 @@
 
 .cards__list {
   display: grid;
+  column-gap: 17px;
+  row-gap: 20px;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, 282px);
-  grid-gap: 20px 17px;
-  padding: 0;
-  margin: 0;
+  padding-left: 0;
+  margin: 0 auto;
+  list-style: none;
 }
 
 .card {
@@ -34,6 +32,8 @@
   border-radius: 10px;
   flex-direction: column;
   list-style: none;
+  border-radius: 3%;
+  overflow: hidden;
 }
 
 .card__image {
@@ -51,8 +51,6 @@
   padding-right: 20px;
   align-items: center;
   justify-content: space-between;
-  border-end-end-radius: 10px;
-  border-end-start-radius: 10px;
 }
 
 .card__like-button {
@@ -60,38 +58,41 @@
   width: 21px;
   height: 18px;
   border: none;
-  cursor: pointer;
-  border: 0;
-  margin: auto 20px auto auto;
-  background-color: rgba(0, 0, 0, 0);
-  transition: ease-in-out 1s;
+  transition: 0.2s ease-in;
 }
 
-.card__button:hover {
-  opacity: 50%;
+.card__like-button:hover {
+  opacity: 0.5;
   cursor: pointer;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .card {
+    width: 282px;
+  }
+
   .cards {
     width: auto;
+    align-items: center;
+    margin-right: 19px;
   }
+
+  .card__like-button {
+    align-self: center;
+  }
+
   .cards__list {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    width: 282px;
-    margin: 0 auto;
-  }
-
-  .card__discription {
-    /*max-width: 282px;
-    line-height: 361px;
-    margin-top: 330px;
-    margin-left: 798px;*/
-    border-radius: 10px;
+    place-items: center;
   }
 }
+
 @media screen and (min-width: 768px) and (max-width: 1280px) {
+  .card {
+    justify-content: center;
+    flex-direction: column;
+  }
   .cards {
     text-align: center;
   }

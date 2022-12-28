@@ -28,13 +28,11 @@
   }
 
   .page__content {
-    width: calc (100% - 38px);
-    margin: 0 19px;
   }
 
   .page__section {
     max-width: 880px;
-    margin-right: 19px;
-    margin-top: 30px;
+    margin-right: 28px;
+    /*margin-top: 30px;/*
   }
 }
