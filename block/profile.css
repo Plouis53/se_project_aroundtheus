@@ -48,7 +48,7 @@
 
 .profile__title {
   display: flex;
-  font-style: "Inter", Arial, sans-serif;
+  font-style: "Inter", "arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 42px;

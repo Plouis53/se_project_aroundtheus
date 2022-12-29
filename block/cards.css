@@ -29,7 +29,6 @@
 
 .card {
   display: flex;
-  border-radius: 10px;
   flex-direction: column;
   list-style: none;
   border-radius: 3%;
