@@ -2,6 +2,8 @@
 
 @import url(../block/cards.css);
 
+@import url(../block/card.css);
+
 @import url(../block/footer.css);
 
 @import url(../block/header.css);
@@ -10,4 +12,4 @@
 
 @import url(../block/profile.css);
 
-@import url(../vendor/Fonts/font.css);
+@import url(../Fonts/font.css);
