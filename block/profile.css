@@ -31,7 +31,8 @@
 }
 
 .profile__add-button {
-  background: transparent url(../images/Add\ Button\ Icon.svg) center no-repeat;
+  background: transparent url(../images/Add\ Button\ Main\ page.svg) center
+    no-repeat;
   width: 150px;
   height: 50px;
   margin-left: auto;
@@ -39,6 +40,9 @@
   box-sizing: border-box;
   border-radius: 2px;
   margin-top: -20px;
+  justify-self: end;
+  align-self: center;
+  grid-area: add;
 }
 
 .profile__add-button:hover {
@@ -123,6 +127,7 @@
     border-radius: 2px;
     width: 282px;
     height: 50px;
+    margin-top: auto;
   }
 }
 
