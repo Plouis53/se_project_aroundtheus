@@ -1,12 +1,8 @@
 .footer {
   max-width: 880px;
-  margin-top: 60px;
   width: 100%;
-  margin: 0 auto;
-  margin-bottom: 60px;
   height: 18px;
   top: 60px;
-  margin: 0 auto 0 auto;
 }
 
 .footer__copyright {
@@ -17,8 +13,6 @@
   font-family: "Inter", Arial, sans-serif;
   font-style: normal;
   max-width: 880px;
-  margin: 0;
-  padding-top: 67px;
   padding-bottom: 60px;
 }
 
@@ -35,6 +29,7 @@
     padding-bottom: 18px;
     font-weight: 400;
     color: #545454;
-    width: 318px;
+    width: 282px;
+    margin: 0 auto;
   }
 }
