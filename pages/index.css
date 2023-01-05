@@ -1,15 +1,15 @@
 @import url(../vendor/normalize.css);
 
-@import url(../block/cards.css);
+@import url(../blocks/cards.css);
 
-@import url(../block/card.css);
+@import url(../blocks/card.css);
 
-@import url(../block/footer.css);
+@import url(../blocks/footer.css);
 
-@import url(../block/header.css);
+@import url(../blocks/header.css);
 
-@import url(../block/page.css);
+@import url(../blocks/page.css);
 
-@import url(../block/profile.css);
+@import url(../blocks/profile.css);
 
 @import url(../Fonts/font.css);
