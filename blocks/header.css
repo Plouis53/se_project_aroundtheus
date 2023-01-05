@@ -23,6 +23,7 @@
     position: relative;
     margin: 0 auto;
     padding-left: 27px;
+    box-sizing: border-box;
   }
 
   .header__logo {
