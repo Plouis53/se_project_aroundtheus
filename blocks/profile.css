@@ -142,6 +142,15 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
+  .profile {
+    padding: 0;
+  }
+
+  .profile__add-button {
+    padding: 10px;
+    margin: 20px;
+  }
+
   .profile__edit-button {
     margin-right: 19px;
   }
