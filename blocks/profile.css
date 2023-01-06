@@ -93,6 +93,13 @@
     align-items: center;
   }
 
+  .profile__info {
+    display: grid;
+    grid-template-areas: "title button" "description description";
+    grid-template-columns: minmax(auto, 196px) auto;
+    align-items: center;
+  }
+
   .profile__description {
     margin-left: 19px;
     margin-right: 19px;
@@ -109,20 +116,18 @@
     justify-self: center;
     width: 120px;
     height: 120px;
+    margin-right: 24px;
   }
   .profile__title {
     font-size: 22px;
     padding-top: 26.25px;
     text-overflow: ellipsis;
-    margin-left: 62px;
   }
 
   .profile__edit-button {
     margin-top: 24px;
     width: 18px;
     height: 18px;
-    margin-left: 15px;
-    margin-right: 29px;
   }
   .profile__add-button {
     margin-left: 19px;
