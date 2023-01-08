@@ -3,7 +3,6 @@
   border-bottom: rbga(84, 84, 84, 0.7);
   border-bottom: 1px solid #545454;
   margin: 0 auto;
-  padding: 41px 0 0 0;
   max-width: 880px;
 }
 
@@ -31,7 +30,6 @@
 @media screen and (min-width: 768px) and (max-width: 1280px) {
   .header {
     padding-top: 28px;
-    padding-left: 27px;
   }
 
   .header__logo {
