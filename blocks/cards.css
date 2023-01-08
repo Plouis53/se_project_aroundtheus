@@ -1,7 +1,3 @@
-.cards {
-  margin-top: 30px;
-}
-
 .cards__list {
   display: grid;
   column-gap: 17px;
