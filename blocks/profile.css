@@ -147,12 +147,4 @@
   .profile {
     padding: 0;
   }
-
-  .profile__add-button {
-    padding: 10px;
-  }
-
-  .profile__edit-button {
-    margin-right: 19px;
-  }
 }
