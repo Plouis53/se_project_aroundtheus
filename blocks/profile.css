@@ -101,7 +101,7 @@
     margin-right: 19px;
     justify-self: center;
     font-size: 14px;
-    margin-top: 14px;
+    margin-top: 8px;
     margin-bottom: 36px;
   }
 
@@ -111,7 +111,7 @@
   }
   .profile__title {
     font-size: 22px;
-    padding-top: 26.25px;
+    padding-top: 16px;
   }
 
   .profile__edit-button {
