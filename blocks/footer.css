@@ -13,22 +13,15 @@
   max-width: 880px;
   padding-top: 67px;
   padding-bottom: 60px;
+  margin: 0;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .footer {
-    padding-bottom: 36px;
-  }
-
   .footer__copyright {
     font-size: 14px;
-    font-family: "Inter", arial, sans-serif;
-    font-style: normal;
-    line-height: 17px;
     padding-bottom: 36px;
     font-weight: 400;
-    color: #545454;
-    margin: 0 auto;
-    margin-left: 19px;
+    margin: 0 19px;
+    padding-top: 48px;
   }
 }
