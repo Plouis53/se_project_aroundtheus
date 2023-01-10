@@ -1,7 +1,7 @@
 .header {
+  padding-top: 45px;
   padding-bottom: 41px;
-  border-bottom: rbga(84, 84, 84, 0.7);
-  border-bottom: 1px solid #545454;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
   margin: 0 auto;
   max-width: 880px;
 }
@@ -15,21 +15,9 @@
   .header {
     padding-bottom: 32px;
     padding-top: 28px;
-    max-width: 880px;
     width: 100%;
-    margin: 0 auto;
     padding-left: 27px;
     box-sizing: border-box;
-  }
-
-  .header__logo {
-    width: 126px;
-    height: 24px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1280px) {
-  .header {
-    padding-top: 28px;
   }
 
   .header__logo {
