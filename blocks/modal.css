@@ -14,6 +14,7 @@
 
 .modal_opened {
   display: flex;
+  visibility: visible;
 }
 
 .modal__container {
@@ -22,6 +23,7 @@
   height: 330px;
   background-color: #fff;
   border-radius: 10px;
+  margin: auto;
 }
 
 .modal__heading {
@@ -34,8 +36,56 @@
   margin: 34px 64px 38.26px 36px;
 }
 
-.modal__close-button {
-  background-image: url(../images/Modal\ Close\ Icon.svg);
+.modal__form_fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin: 0 36px 0 36px;
+  padding: 0;
+}
+.modal__form_input {
+  border: none;
+  height: 14px;
+  padding-bottom: 13.26px;
+  outline: none;
+  height: 14px;
+  left: 461px;
+  top: 306px;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.modal__form_divider {
+  width: 100%;
+  border-bottom: solid 1px #000;
+  margin-bottom: 27px;
+}
+
+.modal__form_divider:nth-last-child {
+  margin-bottom: 40px;
+}
+
+.modal__button {
+  height: 50px;
+  color: #fff;
+  background-color: #000;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 2px;
+  padding: 0;
+}
+
+.modal__button:hover {
+  cursor: pointer;
+}
+
+.modal__close {
+  background-image: url(../images/Close\ Icon.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-color: transparent;
@@ -43,37 +93,26 @@
   height: 40px;
   border: none;
   position: absolute;
-  top: -45px;
-  right: -45px;
   transform: rotate(90deg);
 }
 
-.modal__close-button:hover {
+.modal__close:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
   .modal__container {
-    font-size: 14px;
-    margin: 0 22px;
     width: 282px;
     height: 322px;
-    top: 123px;
-    position: absolute;
   }
 
-  .modal__heading {
-    width: 238px;
-    margin: 25px 22px 45px 22px;
+  .modal__form_fieldset {
+    margin: 0 22px;
   }
 
-  .modal__close-button {
+  .modal__close {
     width: 26px;
     height: 26px;
-    top: -38px;
-    left: 253px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   }
 }

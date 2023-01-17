@@ -114,28 +114,30 @@
       <div class="modal__container">
         <button
           class="modal__close"
-          id="modal-close-button"
+          id="profile-edit-close"
           type="button"
         ></button>
-        <h2 class="modal__heading">Edit profile</h2>
-        <form class="form">
-          <fieldset class="form_fieldset">
+        <form class="modal__form" id="profile-modal-form">
+          <h2 class="modal__heading">Edit profile</h2>
+          <fieldset class="modal__form_fieldset">
             <input
-              class="form__input"
+              class="modal__form__input"
               type="text"
               id="profile-title-input"
               required
               placeholder="Name"
             />
+            <span class="modal__form_divider"></span>
             <input
-              class="form__input"
+              class="modal__form__input"
               type="text"
               name="profile-description-input"
               required
               placeholder="Description"
             />
+            <span class="modal__form_divider"></span>
+            <button type="submit" class="modal__button">Save</button>
           </fieldset>
-          <button type="submit" class="form__button">Save</button>
         </form>
       </div>
     </div>
