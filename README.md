@@ -26,5 +26,8 @@ GitHub
 
 - [Link to the project on Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)
 
+Project Screenshot:
+Screenshot 2023-01-16 at 9.46.11 PM.png
+
 GitHub Pages
 https://plouis53.github.io/se_project_aroundtheus/
