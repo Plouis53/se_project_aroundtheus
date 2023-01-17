@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Practicum Sprint 3" />
+    <meta name="author" content="Phillippe Louis" />
+    <meta name="keywords" content="HTML, CSS, JavaScript, Figma" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="keywords" content="US, National parks, explore US, parks" />
@@ -106,6 +109,27 @@
       <footer class="footer">
         <p class="footer__copyright">© 2022 Around The U.S.</p>
       </footer>
+    </div>
+    <div class="modal" id="profile-edit-modal">
+      <div class="modal__container">
+        <button class="modal__close" id="modal-close-button"></button>
+        <p class="modal__heading">Edit profile</p>
+        <form class="modal__form">
+          <input
+            class="form__input"
+            type="text"
+            name="title"
+            placeholder="Name"
+          />
+          <input
+            class="form__input"
+            type="text"
+            name="description"
+            placeholder="Description"
+          />
+          <button class="modal__button">Save</button>
+        </form>
+      </div>
     </div>
     <script src="./scripts/index.js"></script>
   </body>

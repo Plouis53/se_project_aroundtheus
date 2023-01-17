@@ -1,5 +1,7 @@
 @import url(../vendor/normalize.css);
 
+@import url(../vendor/Fonts/font.css);
+
 @import url(../blocks/cards.css);
 
 @import url(../blocks/card.css);
