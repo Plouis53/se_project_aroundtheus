@@ -1,82 +1,79 @@
 .modal {
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.5);
-  top: 0;
+  z-index: 1;
   left: 0;
-  bottom: 0;
+  top: 0;
   right: 0;
-  z-index: 999;
-  display: flex;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   display: none;
+  align-items: center;
+  justify-content: center;
   padding: 0 19px;
 }
 
 .modal_opened {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .modal__container {
-  background-color: #fff;
-  margin: auto;
-  padding: 36px;
-  border-radius: 10px;
   position: relative;
   width: 430px;
   height: 330px;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
-.modal__close {
-  width: 40px;
-  height: 40px;
-  background-image: url(../images/Modal\ Close\ Icon.svg);
-  border: none;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  bottom: calc(100% + 5px);
-  left: calc(100% + 5px);
-  cursor: pointer;
-}
 .modal__heading {
-  color: black;
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
   font-weight: 900;
   font-size: 24px;
-  line-height: 29px;
-  margin: 0;
+  line-height: 1.21;
+  color: #000;
+  margin: 34px 64px 38.26px 36px;
 }
 
-.modal__form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 54px;
+.modal__close-button {
+  background-image: url(../images/Close-Icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  border: none;
+  position: absolute;
+  top: -45px;
+  right: -45px;
+  transform: rotate(90deg);
 }
 
-.modal__button {
-  height: 50px;
-  line-height: 22px;
-  font-size: 18px;
-  font-weight: 400;
-  background-color: #000;
-  color: #fff;
-  margin-top: 18px;
-  padding: 0;
+.modal__close-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .modal__heading {
-    font-size: 18px;
-    line-height: 22px;
+@media screen and (max-width: 767px) {
+  .modal__container {
+    font-size: 14px;
+    margin: 0 22px;
+    width: 282px;
+    height: 322px;
+    top: 123px;
+    position: absolute;
   }
-  .modal__close {
+
+  .modal__heading {
+    width: 238px;
+    margin: 25px 22px 45px 22px;
+  }
+
+  .modal__close-button {
     width: 26px;
     height: 26px;
-  }
-
-  .modal__button {
-    font-size: 14px;
-    line-height: 17px;
+    top: -38px;
+    left: 253px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   }
 }
