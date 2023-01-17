@@ -7,7 +7,7 @@ Overview
 - Intro
 - Figma
 - Images
-  -GitHub
+-GitHub
 
 Project Description and Tech Functionality
 
@@ -27,7 +27,8 @@ GitHub
 - [Link to the project on Figma](https://www.figma.com/file/ii4xxsJ0ghevUOcssTlHZv/Sprint-3%3A-Around-the-US?node-id=0%3A1)
 
 Project Screenshot:
-![Screenshot 2023-01-16 at 9 46 11 PM](https://user-images.githubusercontent.com/117612222/212800772-eabd402d-7c6a-40e5-96f2-fb89e45fe532.png)
+[Screenshot 2023-01-16 at 9.46.11 PM.pdf](https://github.com/Plouis53/se_project_aroundtheus/files/10430794/Screenshot.2023-01-16.at.9.46.11.PM.pdf)
+
 
 
 GitHub Pages
