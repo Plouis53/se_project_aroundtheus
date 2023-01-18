@@ -85,7 +85,7 @@
 }
 
 .modal__close {
-  background-image: url(../images/Close\ Icon.svg);
+  background-image: url("../images/Close\ Icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-color: transparent;
@@ -94,6 +94,8 @@
   border: none;
   position: absolute;
   transform: rotate(90deg);
+  top: -45px;
+  right: -45px;
 }
 
 .modal__close:hover {
