@@ -35,7 +35,9 @@
               id="profile-edit-button"
               type="button"
             ></button>
-            <p class="profile__description">Explorer</p>
+            <p class="profile__description" id="profile-description">
+              Explorer
+            </p>
           </div>
           <button class="profile__add-button" type="button"></button>
         </section>
@@ -127,6 +129,7 @@
             <input
               class="modal__form__input"
               type="text"
+              name="title"
               id="profile-title-input"
               required
               placeholder="Name"
@@ -135,7 +138,8 @@
             <input
               class="modal__form__input"
               type="text"
-              name="profile-description-input"
+              id="profile-description-input"
+              name="description"
               required
               placeholder="Description"
             />
