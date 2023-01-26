@@ -82,10 +82,11 @@ initialCards.forEach((cardData) => {
   cardListElement.append(cardElement);
 });
 
+/* fill in
 for (let i = 0; i < initialCards.length; i++) {
   cardWrap.prepend(getCardElement(initialCards[i]));
 }
 
 initialCards.forEach((cardData) => {
   cardWrap.prepend(getCardElement(cardData[i]));
-});
+});*/

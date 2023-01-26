@@ -47,6 +47,7 @@
         <p class="footer__copyright">© 2022 Around The U.S.</p>
       </footer>
     </div>
+    <!--Edit Modal-->
     <div class="modal" id="profile-edit-modal">
       <div class="modal__container">
         <button
@@ -78,6 +79,43 @@
             <button type="submit" class="modal__button">Save</button>
           </fieldset>
         </form>
+      </div>
+    </div>
+    <!--Add Modal-->
+    <div class="modal" id="card-add-modal">
+      <div class="modal__container">
+        <button class="modal__close" id="card-add-close" type="button"></button>
+        <form class="modal__form" id="card-add-close">
+          <h3 class="modal__heading">New Place</h3>
+          <fieldset class="modal__form_fieldset">
+            <input
+              class="modal__form-input"
+              type="text"
+              name="title"
+              id="card-title-input"
+              required
+              placeholder="Card Name"
+            />
+            <span class="modal__form-divider"></span>
+            <input
+              class="modal__form-input"
+              type="text"
+              id="profile-description-input"
+              name="link"
+              required
+              placeholder="image link"
+            />
+            <span class="modal__form-divider"></span>
+            <button class="modal__button">Create</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="card-image-modal">
+      <div class="modal__container-card">
+        <img class="modal__image-card" id="card-modal-image" src="#" alt="" />
+        <p class="modal__caption-card" id="card-modal-caption"></p>
+        <button class="modal__close" id="card-image-close"></button>
       </div>
     </div>
     <template id="card-template">
