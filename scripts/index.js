@@ -81,3 +81,11 @@ initialCards.forEach((cardData) => {
   const cardElement = getCardElement(cardData);
   cardListElement.append(cardElement);
 });
+
+for (let i = 0; i < initialCards.length; i++) {
+  cardWrap.prepend(getCardElement(initialCards[i]));
+}
+
+initialCards.forEach((cardData) => {
+  cardWrap.prepend(getCardElement(cardData[i]));
+});
