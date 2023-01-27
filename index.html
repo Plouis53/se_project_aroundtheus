@@ -37,7 +37,11 @@
             ></button>
             <p class="profile__description">Explorer</p>
           </div>
-          <button class="profile__add-button" type="button"></button>
+          <button
+            class="profile__add-button"
+            id="profile-add-button"
+            type="button"
+          ></button>
         </section>
         <section class="cards page__section">
           <ul class="cards__list"></ul>
@@ -86,7 +90,7 @@
       <div class="modal__container">
         <button class="modal__close" id="card-add-close" type="button"></button>
         <form class="modal__form" id="card-add-form">
-          <h3 class="modal__heading">New Place</h3>
+          <p class="modal__heading">New Place</p>
           <fieldset class="modal__form_fieldset">
             <input
               class="modal__form-input"
@@ -94,13 +98,13 @@
               name="title"
               id="card-title-input"
               required
-              placeholder="Card Name"
+              placeholder="Title"
             />
             <span class="modal__form-divider"></span>
             <input
               class="modal__form-input"
               type="text"
-              id="profile-description-input"
+              id="card-image-input"
               name="link"
               required
               placeholder="image link"
@@ -126,8 +130,8 @@
           type="button"
         ></button>
         <img class="card__image" src="#" alt="" id="card-image" />
-        <div class="card__description">
-          <h2 class="card__title" id="card-title"></h2>
+        <div class="card__description" id="card-description-title">
+          <h2 class="card__title"></h2>
           <button class="card__like-button" type="button"></button>
         </div>
       </li>

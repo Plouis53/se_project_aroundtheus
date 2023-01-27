@@ -38,6 +38,7 @@ const profileDescriptionInput = document.querySelector(
 
 const cardAddModal = document.querySelector("#card-add-modal");
 const cardAddButton = document.querySelector("#profile-add-button");
+const CardDescription = document.querySelector(".card__description");
 const cardTitle = document.querySelector("#card-title");
 const cardImage = document.querySelector("#card-image");
 const cardTitleInput = document.querySelector("#card-title-input");
