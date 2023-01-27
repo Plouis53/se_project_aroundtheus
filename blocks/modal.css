@@ -36,6 +36,12 @@
   margin: 34px 64px 38.26px 36px;
 }
 
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 54px;
+}
+
 .modal__form_fieldset {
   display: flex;
   flex-direction: column;
@@ -57,6 +63,13 @@
   font-size: 14px;
   line-height: 17px;
   color: #000000;
+}
+
+.modal__form-input::placeholder::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000;
 }
 
 .modal__form-divider {
@@ -82,6 +95,23 @@
 
 .modal__button:hover {
   cursor: pointer;
+  opacity: 0.8;
+}
+
+.modal__container-card {
+  position: relative;
+}
+
+.modal__image-card {
+  max-width: 100%;
+  max-height: 540px;
+}
+
+.modal__caption-card {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  margin: 10px 0 0;
 }
 
 .modal__close {
@@ -103,7 +133,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 880px) {
   .modal__heading {
     font-size: 18px;
     line-height: 21.78px;
@@ -111,8 +141,9 @@
     padding-bottom: 75px;
   }
   .modal__container {
-    width: 282px;
-    height: 322px;
+    top: 136px;
+    max-height: 300px;
+    max-width: 100%;
   }
 
   .modal__form_fieldset {
@@ -124,5 +155,15 @@
     height: 26px;
     bottom: calc(100% + 25px);
     left: calc(100% - 39px);
+  }
+
+  .modal__image-card {
+    max-width: 100%;
+  }
+
+  .modal__close-card {
+    left: calc(100% - 30px);
+    width: 30px;
+    height: 30px;
   }
 }

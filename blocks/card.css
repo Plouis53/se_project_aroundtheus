@@ -49,7 +49,26 @@
   align-self: center;
 }
 
+.card__like-button_active {
+  background: transparent url(../images/Like-Active.svg) center no-repeat;
+}
+
 .card__like-button:hover {
   opacity: 0.5;
   cursor: pointer;
+}
+
+.card__delete-button {
+  background: transparent url(../images/delete.icon.svg) center no-repeat;
+  width: 18px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  top: 36px;
+  left: calc(100% - 33px);
+}
+
+.card__delete-button:hover {
+  opacity: 0.6;
 }
