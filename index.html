@@ -85,7 +85,7 @@
     <div class="modal" id="card-add-modal">
       <div class="modal__container">
         <button class="modal__close" id="card-add-close" type="button"></button>
-        <form class="modal__form" id="card-add-close">
+        <form class="modal__form" id="card-add-form">
           <h3 class="modal__heading">New Place</h3>
           <fieldset class="modal__form_fieldset">
             <input
@@ -120,9 +120,14 @@
     </div>
     <template id="card-template">
       <li class="card">
-        <img src="" class="card__image" alt="" />
+        <button
+          class="card__delete-button"
+          id="card-delete-button"
+          type="button"
+        ></button>
+        <img class="card__image" src="#" alt="" id="card-image" />
         <div class="card__description">
-          <h2 class="card__title"></h2>
+          <h2 class="card__title" id="card-title"></h2>
           <button class="card__like-button" type="button"></button>
         </div>
       </li>
