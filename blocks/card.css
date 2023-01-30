@@ -6,6 +6,15 @@
   width: 282px;
   overflow: hidden;
 }
+.cards__list {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 282px);
+  grid-gap: 20px 17px;
+  padding: 0;
+  margin: 0;
+}
+
 .card__title {
   font-family: "Inter", Arial, sans-serif;
   font-style: normal;
@@ -23,10 +32,12 @@
 .card__image {
   width: 282px;
   height: 282px;
-  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
 }
 
-.card__description {
+.card__caption {
   display: flex;
   background-color: white;
   color: black;
@@ -59,7 +70,7 @@
 }
 
 .card__delete-button {
-  background: transparent url(../images/delete.icon.svg) center no-repeat;
+  background: transparent url(../images/Delete\ Icon.svg) center no-repeat;
   width: 18px;
   height: 20px;
   cursor: pointer;

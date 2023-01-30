@@ -80,59 +80,78 @@
               placeholder="Description"
             />
             <span class="modal__form-divider"></span>
-            <button type="submit" class="modal__button">Save</button>
+            <button type="submit" class="modal__form-button">Save</button>
           </fieldset>
         </form>
       </div>
     </div>
+    <!--^Edit Modal^-->
     <!--Add Modal-->
-    <div class="modal" id="card-add-modal">
-      <div class="modal__container">
-        <button class="modal__close" id="card-add-close" type="button"></button>
-        <form class="modal__form" id="card-add-form">
-          <p class="modal__heading">New Place</p>
-          <fieldset class="modal__form_fieldset">
+    <div class="modal modal_opened" id="modal-add-card">
+      <div class="modal__container" id="modal-container">
+        <button class="modal__close" id="modal-add-card-close-button"></button>
+        <form class="modal__form" id="modal-add-card-form">
+          <h2 class="modal__form-heading" id="modal-add-card-heading">
+            New Place
+          </h2>
+          <fieldset class="modal__form-fieldset" id="modal-add-card-fieldset">
             <input
               class="modal__form-input"
               type="text"
               name="title"
-              id="card-title-input"
+              id="modal-card-title-input"
               required
               placeholder="Title"
             />
-            <span class="modal__form-divider"></span>
+            <span
+              class="modal__form-divider"
+              id="modal-divider-add-card"
+            ></span>
             <input
               class="modal__form-input"
               type="text"
-              id="card-image-input"
+              id="modal-card-image-input"
               name="link"
               required
-              placeholder="image link"
+              placeholder="Image link"
             />
-            <span class="modal__form-divider"></span>
-            <button class="modal__button">Create</button>
+            <span
+              class="modal__form-divider"
+              id="modal-add-card-divider"
+            ></span>
+            <button
+              class="modal__form-button"
+              type="submit"
+              id="modal-add-card-create"
+            >
+              Create
+            </button>
           </fieldset>
         </form>
       </div>
     </div>
-    <div class="modal" id="card-image-modal">
-      <div class="modal__container-card">
-        <img class="modal__image-card" id="card-modal-image" src="#" alt="" />
-        <p class="modal__caption-card" id="card-modal-caption"></p>
-        <button class="modal__close" id="card-image-close"></button>
+    <!--^Add Modal^-->
+    <div class="modal modal modal_opended" id="modal-card-picture">
+      <div class="modal__container-card" id="modal-card-container">
+        <img class="modal__image-card" id="modal-card-image" src="#" alt="" />
+        <p class="modal__caption-card" id="modal-card-caption"></p>
+        <button class="modal__close" id="modal-card-close-image"></button>
       </div>
     </div>
     <template id="card-template">
-      <li class="card">
+      <li class="card" id="card">
         <button
           class="card__delete-button"
-          id="card-delete-button"
+          id="modal-card-delete-button"
           type="button"
         ></button>
-        <img class="card__image" src="#" alt="" id="card-image" />
-        <div class="card__description" id="card-description-title">
-          <h2 class="card__title"></h2>
-          <button class="card__like-button" type="button"></button>
+        <img class="card__image" src="#" alt="" id="modal-card-image" />
+        <div class="card__caption" id="modal-card-description">
+          <h2 class="card__title" id="modal-card-moniker"></h2>
+          <button
+            class="card__like-button"
+            id="modal-card-like-button"
+          ></button>
         </div>
       </li>
     </template>
