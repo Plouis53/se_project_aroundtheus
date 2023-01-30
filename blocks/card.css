@@ -51,7 +51,7 @@
   border-end-start-radius: 10px;
 }
 
-.card__like-button {
+.card__like-button_inactive {
   background: transparent url(../images/like-inactive.svg) center no-repeat;
   width: 21px;
   height: 18px;
