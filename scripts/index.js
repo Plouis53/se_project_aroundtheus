@@ -40,14 +40,12 @@ const profileDescriptionInput = document.querySelector(
 
 //---Sprint 5 -->
 const cardAddModal = document.querySelector("#modal-add-card");
-const cardAddButton = document.querySelector("#profile-add-button");
+const cardAddButton = document.querySelector("#modal-add-close");
 const cardTitle = document.querySelector(".card__title");
 const cardImage = document.querySelector("#modal-card-image");
 const cardTitleInput = document.querySelector("#modal-card-title-input");
 const cardImageInput = document.querySelector("#modal-card-image-input");
-const cardCloseButton = cardAddModal.querySelector(
-  "#modal-add-card-close-button"
-);
+const cardCloseButton = cardAddModal.querySelector("#modal-close-button");
 
 const profileEditForm = profileEditModal.querySelector(".modal__form");
 const cardListElement = document.querySelector(".cards__list");
@@ -146,9 +144,14 @@ profileEditButton.addEventListener("click", () => {
 
 profileEditClose.addEventListener("click", closePopUp);
 profileEditForm.addEventListener("submit", handleProfileEditSubmit);
+
 initialCards.forEach((cardData) => {
   const cardElement = getCardElement(cardData);
   cardListElement.append(cardElement);
+});
+
+cardAddButton.addEventListener("click", () => {
+  openPopUp(cardAddModal);
 });
 
 cardCloseButton.addEventListener("click", () => {
