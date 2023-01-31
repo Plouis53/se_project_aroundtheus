@@ -136,12 +136,19 @@
   margin: 10px 0 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .modal__heading {
     font-size: 18px;
     line-height: 21.78px;
     margin: 22px;
     padding-bottom: 75px;
+  }
+
+  .modal__close {
+    width: 26px;
+    height: 26px;
+    bottom: calc(100% + 25px);
+    left: calc(100% - 39px);
   }
 
   .modal__form-button {
@@ -157,13 +164,6 @@
 
   .modal__form_fieldset {
     margin: 0 22px;
-  }
-
-  .modal__close {
-    width: 26px;
-    height: 26px;
-    bottom: calc(100% + 25px);
-    left: calc(100% - 39px);
   }
 
   .modal__image-card {
