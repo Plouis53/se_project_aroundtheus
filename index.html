@@ -60,17 +60,25 @@
           type="button"
         ></button>
         <form class="modal__form" id="profile-modal-form">
-          <h2 class="modal__heading">Edit profile</h2>
-          <fieldset class="modal__form_fieldset">
+          <h2 class="modal__heading" id="modal-profile-heading">
+            Edit profile
+          </h2>
+          <fieldset
+            class="modal__form_fieldset"
+            id="modal-profile-form-fieldset"
+          >
             <input
-              class="modal__edit-form-input"
+              class="modal__form-input"
               type="text"
               name="title"
               id="profile-title-input"
               required
               placeholder="Name"
             />
-            <span class="modal__form-divider"></span>
+            <span
+              class="modal__form-divider"
+              id="modal-profile-form-divider"
+            ></span>
             <input
               class="modal__form-input"
               type="text"
@@ -79,8 +87,17 @@
               required
               placeholder="Description"
             />
-            <span class="modal__form-divider"></span>
-            <button type="submit" class="modal__form-button">Save</button>
+            <span
+              class="modal__form-divider"
+              id="modal-profile-description-form-divider"
+            ></span>
+            <button
+              type="submit"
+              class="modal__form-button"
+              id="modal-form-save-button"
+            >
+              Save
+            </button>
           </fieldset>
         </form>
       </div>
@@ -131,8 +148,8 @@
       </div>
     </div>
     <!--^Add Modal^-->
-    <div class="modal modal modal_opended" id="modal-card-picture">
-      <div class="modal__container-card" id="modal-card-container">
+    <div class="modal modal modal__opened" id="modal-card-picture">
+      <div class="modal__container" id="modal-card-container">
         <img class="modal__image-card" id="modal-card-image" src="#" alt="" />
         <p class="modal__caption-card" id="modal-card-caption"></p>
         <button class="modal__close" id="modal-add-close"></button>

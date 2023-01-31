@@ -14,21 +14,9 @@
   transition: visibility 0s linear 0.3s, opacity 0.3s linear;
 }
 
-/* Edit Profile*/
 .modal__form {
-  display: flex;
   flex-direction: column;
   margin-top: 54px;
-}
-
-.modal__edit-form-input {
-  height: 50px;
-  border-top: 1px;
-  border-right: 1px;
-  border-left: 1px;
-  border-color: rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px;
-  padding: 0;
 }
 
 .modal__form-heading {
@@ -79,6 +67,13 @@
   outline: none;
 }
 
+.modal__form-input:: ::placeholder::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000;
+}
+
 .modal__form-divider {
   width: 100%;
   border-bottom: solid 1px #000;
@@ -125,7 +120,7 @@
   opacity: 0.8;
 }
 
-.modal__container-card {
+.modal__container {
   position: relative;
 }
 
