@@ -112,8 +112,8 @@ function getCardElement(cardData) {
   return cardElement;
 }
 
-function closePopUp() {
-  profileEditModal.classList.remove("modal_opened");
+function closePopUp(modal) {
+  Modal.classList.remove("modal_opened");
 }
 
 function getCardElement(cardData) {
