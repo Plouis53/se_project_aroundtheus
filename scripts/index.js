@@ -151,7 +151,6 @@ initialCards.forEach((cardData) => {
   cardListElement.append(cardElement);
 });
 
-cardCloseButton.addEventListener("click,"()=>{
+cardCloseButton.addEventListener("click", () => {
   closePopUp(cardAddModal);
 });
-
