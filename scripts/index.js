@@ -39,20 +39,23 @@ const profileDescriptionInput = document.querySelector(
 //---^Sprint 4 ^-->
 
 //---Sprint 5 -->
-const cardAddModal = document.querySelector("#modal-add-card");
-const cardAddButton = document.querySelector("#modal-add-close");
+const addNewCardModal = document.querySelector("#card-add-modal");
+const addNewCardButton = document.querySelector("#profile-add-button");
+// need to add close button for add new card modal
 const cardTitle = document.querySelector(".card__title");
 const cardImage = document.querySelector("#modal-card-image");
 const cardTitleInput = document.querySelector("#modal-card-title-input");
 const cardImageInput = document.querySelector("#modal-card-image-input");
-const cardCloseButton = cardAddModal.querySelector("#modal-close-button");
+const cardCloseButton = addNewCardModal.querySelector(
+  "#modal-add-card-close-button"
+);
 
 const profileEditForm = profileEditModal.querySelector(".modal__form");
 const cardListElement = document.querySelector(".cards__list");
 const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
 
-const cardAddForm = cardAddModal.querySelector("#modal-add-card-form");
+const cardAddForm = addNewCardModal.querySelector("#modal-add-card-form");
 
 const modalCardPicture = document.querySelector("#modal-card-picture");
 const modalCaption = document.querySelector("#modal-card-caption");
@@ -98,10 +101,6 @@ function cardView(cardData) {
   });
 }*/
 
-function closePopUp() {
-  profileEditModal.classList.remove("modal_opened");
-}
-
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageElement = cardElement.querySelector(".card__image");
@@ -113,7 +112,11 @@ function getCardElement(cardData) {
 }
 
 function closePopUp(modal) {
-  Modal.classList.remove("modal_opened");
+  modal.classList.remove("modal_opened");
+}
+
+function openPopUp(modal) {
+  modal.classList.add("modal_opened");
 }
 
 function getCardElement(cardData) {
@@ -150,10 +153,10 @@ initialCards.forEach((cardData) => {
   cardListElement.append(cardElement);
 });
 
-cardAddButton.addEventListener("click", () => {
-  openPopUp(cardAddModal);
+addNewCardButton.addEventListener("click", () => {
+  openPopUp(addNewCardModal);
 });
 
 cardCloseButton.addEventListener("click", () => {
-  closePopUp(cardAddModal);
+  closePopUp(addNewCardModal);
 });
