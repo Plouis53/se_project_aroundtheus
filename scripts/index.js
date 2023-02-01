@@ -86,7 +86,7 @@ function getCardView(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageElement = cardElement.querySelector(".card__image");
   const cardTitleElement = cardElement.querySelector(".card__title");
-  const cardLikeButton = cardElement.querySelector("#modal-card-like-button");
+  const cardLikeButton = cardElement.querySelector(".card__like-button");
   const cardDeleteButton = cardElement.querySelector(
     "#modal-card-delete-button"
   );
@@ -120,8 +120,8 @@ function handleProfileEditSubmit(e) {
 function handleAddCardSubmit(e) {
   e.preventDefault();
   addCardTitle.textContent = cardTitleInput.value;
-  cardImage.src = cardImageInput.value;
-  cardImage.alt = cardImageInput.value;
+  modalCardPicture.src = cardImageInput.value;
+  modalCardPicture.alt = cardImageInput.value;
   closePopUp(addNewCardModal);
 }
 
