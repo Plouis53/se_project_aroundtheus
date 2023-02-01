@@ -61,7 +61,7 @@
 }
 
 .card__like-button_active {
-  background: transparent url(../images/Like-Active.svg) center no-repeat;
+  background: transparent url(../images/Like-Active-Icon.svg) center no-repeat;
 }
 
 .card__like-button:hover {
