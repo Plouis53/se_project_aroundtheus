@@ -6,7 +6,7 @@
   width: 282px;
   overflow: hidden;
 }
-.cards__list {
+.card__list {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, 282px);
@@ -37,7 +37,7 @@
   cursor: pointer;
 }
 
-.card__caption {
+.card__description {
   display: flex;
   background-color: white;
   color: black;
