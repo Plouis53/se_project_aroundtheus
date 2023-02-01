@@ -105,7 +105,7 @@
     <!--^Edit Modal^-->
     <!--Add Modal-->
     <div class="modal" id="card-add-modal">
-      <div class="modal__container" id="modal-container">
+      <div class="modal__container">
         <button class="modal__close" id="card-close-button"></button>
         <form class="modal__form" id="modal-add-card-form">
           <h2 class="modal__form-heading" id="modal-add-card-heading">
@@ -148,21 +148,21 @@
       </div>
     </div>
     <!--^Add Modal^-->
-    <div class="modal modal modal__opened" id="modal-card-picture">
-      <div class="modal__container" id="modal-card-container">
-        <img class="modal__image-card" id="modal-card-image" src="#" alt="" />
+    <div class="modal" id="card-image-modal">
+      <div class="modal__container-card">
+        <img class="modal__image-card" id="card-modal-image" src="#" alt="#" />
         <p class="modal__caption-card" id="modal-card-caption"></p>
         <button class="modal__close" id="card-close-image"></button>
       </div>
     </div>
     <template id="card-template">
-      <li class="card" id="card">
+      <li class="card">
         <button
           class="card__delete-button"
           id="modal-card-delete-button"
           type="button"
         ></button>
-        <img class="card__image" src="#" alt="#" id="modal-card-image" />
+        <img class="card__image" src="#" alt="#" id="card-image" />
         <div class="card__description">
           <h2 class="card__title" id="card-title"></h2>
           <button

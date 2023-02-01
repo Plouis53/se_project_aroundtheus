@@ -54,9 +54,9 @@ const cardTemplate =
 
 const cardAddForm = addNewCardModal.querySelector("#modal-add-card-form");
 
-const modalCardPicture = document.querySelector("modal modal modal__opened");
+const modalCardPicture = document.querySelector("#card-image-modal");
 const modalCaption = document.querySelector("#modal-card-caption");
-const cardImageModal = document.querySelector("#modal-card-image");
+const cardImageModal = document.querySelector("#card-modal-image");
 const cardImageModalCloseButton = document.querySelector("#card-close-image");
 //---^Sprint 5^ -->
 
@@ -120,8 +120,8 @@ function handleProfileEditSubmit(e) {
 function handleAddCardSubmit(e) {
   e.preventDefault();
   addCardTitle.textContent = cardTitleInput.value;
-  modalCardPicture.src = cardImageInput.value;
-  modalCardPicture.alt = cardImageInput.value;
+  cardImage.src = cardImageInput.value;
+  cardImage.alt = cardImageInput.value;
   closePopUp(addNewCardModal);
 }
 
@@ -130,8 +130,8 @@ function deleteCard(e) {
 }
 
 function handleCardImageModal(cardData) {
-  cardImageModal.src = cardData.name;
-  cardImageModal.alt = cardData.link;
+  modalCardPicture.src = cardData.link;
+  modalCardPicture.alt = cardData.name;
   modalCaption.textContent = cardData.name;
   closePopUp(cardImageModal);
 }
