@@ -60,7 +60,6 @@
   height: 14px;
   padding-bottom: 13.26px;
   outline: none;
-  height: 14px;
   left: 461px;
   top: 306px;
   font-family: "Inter", Arial, sans-serif;
@@ -137,6 +136,11 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .modal__container {
+    width: 282px;
+    height: 322px;
+  }
+
   .modal__heading {
     font-size: 18px;
     line-height: 21.78px;
@@ -168,11 +172,6 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
-  .modal__container {
-    width: 282px;
-    height: 322px;
-  }
-
   .modal__form_fieldset {
     margin: 0 22px;
   }
@@ -185,10 +184,5 @@
     left: calc(100% - 30px);
     width: 30px;
     height: 30px;
-  }
-
-  .modal__container {
-    max-height: 300px;
-    max-width: 100%;
   }
 }
