@@ -62,7 +62,7 @@ const cardImageModalCloseButton = document.querySelector("#card-close-image");
 
 /* Functions*/
 //---Sprint 5 -->
-function closePopop() {
+function closePopUp() {
   profileEditModal.classList.remove("modal_opened");
 }
 
@@ -123,10 +123,6 @@ function handleAddCardSubmit(e) {
   cardImage.src = cardImageInput.value;
   cardImage.alt = cardImageInput.value;
   closePopUp(addNewCardModal);
-}
-
-function deleteCard(e) {
-  e.target.closest(".card").remove();
 }
 
 function handleCardImageModal(cardData) {
