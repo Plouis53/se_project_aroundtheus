@@ -54,9 +54,9 @@ const cardTemplate =
 
 const cardAddForm = addNewCardModal.querySelector("#modal-add-card-form");
 
-const modalCardPicture = document.querySelector("#card-image-modal");
 const modalCaption = document.querySelector("#modal-card-caption");
-const cardImageModal = document.querySelector("#card-modal-image");
+const cardImageModal = document.querySelector("#card-image-modal");
+const modalCardPicture = cardImageModal.querySelector("#modal-card-image");
 const cardImageModalCloseButton = document.querySelector("#card-close-image");
 //---^Sprint 5^ -->
 
@@ -133,7 +133,7 @@ function handleCardImageModal(cardData) {
   modalCardPicture.src = cardData.link;
   modalCardPicture.alt = cardData.name;
   modalCaption.textContent = cardData.name;
-  closePopUp(cardImageModal);
+  openPopUp(cardImageModal);
 }
 //---^Sprint 5^ -->
 /* Event Listener */
