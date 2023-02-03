@@ -10,8 +10,14 @@
   display: none;
   align-items: center;
   justify-content: center;
+  visibility: visible;
+  pointer-events: all;
+  transition-delay: 0s;
   padding: 0 19px;
-  transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.2s, opacity 0.2s ease-in;
 }
 
 .modal__form-heading {
@@ -20,13 +26,8 @@
 }
 
 .modal_opened {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  visibility: visible;
-  pointer-events: all;
   opacity: 1;
-  transition-delay: 0s;
+  visibility: visible;
 }
 
 .modal__container {

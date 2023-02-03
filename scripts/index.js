@@ -62,9 +62,6 @@ const cardImageModalCloseButton = document.querySelector("#card-close-image");
 
 /* Functions*/
 //---Sprint 5 -->
-function closePopUp() {
-  profileEditModal.classList.remove("modal_opened");
-}
 
 function closePopUp(modal) {
   modal.classList.remove("modal_opened");
