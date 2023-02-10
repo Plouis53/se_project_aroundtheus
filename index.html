@@ -73,8 +73,16 @@
               name="title"
               id="profile-title-input"
               required
+              minlength="2"
+              required
+              maxlength="40"
+              required
               placeholder="Name"
             />
+            <span
+              class="modal__error"
+              id="modal-profile-edit-title-input-error"
+            ></span>
             <span
               class="modal__form-divider"
               id="modal-profile-form-divider"
@@ -85,8 +93,17 @@
               id="profile-description-input"
               name="description"
               required
+              minlength="2"
+              required
+              maxlength="200"
+              required
               placeholder="Description"
             />
+            <span
+              class="modal__error"
+              id="modal-profile-edit-description-input-error"
+              >Please fill out this field.</span
+            >
             <span
               class="modal__form-divider"
               id="modal-profile-description-form-divider"
@@ -118,8 +135,13 @@
               name="title"
               id="modal-card-title-input"
               required
+              minlength="1"
+              required
+              maxlength="30"
+              required
               placeholder="Title"
             />
+            <span class="modal__error" id="modal-card-add-title-error"> </span>
             <span
               class="modal__form-divider"
               id="modal-divider-add-card"
@@ -132,12 +154,13 @@
               required
               placeholder="Image link"
             />
+            <span class="modal__error" id="modal-card-add-link-error"> </span>
             <span
               class="modal__form-divider"
               id="modal-add-card-divider"
             ></span>
             <button
-              class="modal__form-button"
+              class="modal__form-button modal__form-button_inactive"
               type="submit"
               id="modal-add-card-create"
             >
@@ -173,5 +196,6 @@
       </li>
     </template>
     <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/validation.js" defer></script>
   </body>
 </html>
