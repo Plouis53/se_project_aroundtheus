@@ -79,7 +79,7 @@
               required
               placeholder="Name"
             />
-            <span class="modal__error" id="modal-profile-edit-title-input-error"
+            <span class="modal__error" id="profile-title-input-error"
               >Please fill out this field.</span
             >
             <span
@@ -98,9 +98,7 @@
               required
               placeholder="Description"
             />
-            <span
-              class="modal__error"
-              id="modal-profile-edit-description-input-error"
+            <span class="modal__error" id="profile-description-input-error"
               >Please fill out this field.</span
             >
             <span
@@ -109,8 +107,7 @@
             ></span>
             <button
               type="submit"
-              class="modal__form-button"
-              id=" modal__form-save-button"
+              class="modal__form-button modal__form-button_inactive"
               disabled
             >
               Save
@@ -141,7 +138,7 @@
               required
               placeholder="Title"
             />
-            <span class="modal__error" id="modal-card-add-title-error"
+            <span class="modal__error" id="modal-card-title-input-error"
               >Please fill out this field.
             </span>
             <span
@@ -149,22 +146,25 @@
               id="modal-divider-add-card"
             ></span>
             <input
-              class="modal__form-input"
+              class="modal__form-input modal__form-input_error"
               type="text"
               id="modal-card-image-input"
               name="link"
               required
               placeholder="Image link"
             />
-            <span class="modal__error" id="modal-card-add-link-error">
-              Please fill out this field.</span
+            <span
+              class="modal__error modal__error_visible"
+              id="modal-card-image-input-error"
+            >
+              Please enter a URL.</span
             >
             <span
               class="modal__form-divider"
               id="modal-add-card-divider"
             ></span>
             <button
-              class="modal__form-button"
+              class="modal__form-button modal__form-button_inactive"
               type="submit"
               id="modal-add-card-create"
               disabled
