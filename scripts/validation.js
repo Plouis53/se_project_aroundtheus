@@ -1,5 +1,3 @@
-// enabling validation by calling enableValidation()
-// pass all the settings on call
 //---Sprint 6 -->
 
 /*1*/
@@ -34,6 +32,7 @@ function setEventListeners(formElements, options) {
     });
   });
 }
+
 /*3*/
 function checkInputValidity(formElements, inputElements, options) {
   if (!inputElements.validity.valid) {
