@@ -9,7 +9,6 @@
   padding: 0 19px;
   visibility: hidden;
   display: flex;
-  z-index: 999;
 }
 
 .modal__form-heading {
