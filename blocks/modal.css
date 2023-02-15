@@ -6,15 +6,10 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  align-items: center;
-  justify-content: center;
-  pointer-events: all;
-  transition-delay: 0s;
   padding: 0 19px;
-  display: flex;
-  opacity: 0;
   visibility: hidden;
-  transition: visibility 0.2s, opacity 0.2s ease-in;
+  display: flex;
+  z-index: 999;
 }
 
 .modal__form-heading {
@@ -110,28 +105,17 @@
 }
 
 .modal__form-input:placeholder {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: #000;
-}
-
-.modal__form-divider::nth-last-child {
-  margin-bottom: 40px;
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .modal__close {
   background-image: url(../images/Close\ Icon.svg);
-  background-repeat: no-repeat;
   background-size: contain;
   background-color: transparent;
   width: 40px;
   height: 40px;
   border: none;
   position: absolute;
-  transform: rotate(90deg);
-  top: -45px;
-  right: -45px;
   bottom: calc(100% + 3px);
   left: calc(100% + 3px);
   transition: 0.2s ease;
@@ -142,23 +126,24 @@
   cursor: pointer;
 }
 
-.modal__container-card {
-  position: relative;
+.modal-card-close {
+  background-color: transparent;
+  background-size: contain;
+  border: none;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: calc(100% + 3px);
+  left: calc(100% + 3px);
+  transition: 0.2s ease;
 }
 
-.modal__image-card {
-  max-width: 100%;
-  max-height: 540px;
+.modal-card-close:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
-.modal__caption-card {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  margin: 10px 0 0;
-}
-
-/* Modal
+/* Modal*/
 .card-image-modal {
   position: fixed;
   top: 0;
@@ -167,7 +152,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 9999;
-}*/
+}
 
 .modal__container-card {
   position: fixed;
@@ -186,18 +171,21 @@
   animation: fadeIn 0.3s ease;
 }
 
-/* Modal
-.card-close-image {
-  background-color: transparent;
-  background-size: contain;
-  border: none;
+.modal__image-card {
+  max-width: 816px;
+  max-height: 540px;
+}
+
+.modal__caption-card {
+  color: white;
   position: absolute;
-  width: 40px;
-  height: 40px;
-  bottom: calc(100% + 3px);
-  left: calc(100% + 3px);
-  transition: 0.2s ease;
-}*/
+  bottom: -22px;
+  left: 0px;
+  font-family: Inter, "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  margin: 0;
+}
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .modal__heading {

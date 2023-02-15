@@ -79,9 +79,7 @@
               required
               placeholder="Name"
             />
-            <span class="modal__error" id="profile-title-input-error"
-              >Please fill out this field.</span
-            >
+            <span class="modal__error" id="profile-title-input-error"></span>
             <input
               class="modal__form-input"
               type="text"
@@ -94,9 +92,10 @@
               required
               placeholder="Description"
             />
-            <span class="modal__error" id="profile-description-input-error"
-              >Please fill out this field.</span
-            >
+            <span
+              class="modal__error"
+              id="profile-description-input-error"
+            ></span>
             <button
               type="submit"
               class="modal__form-button modal__form-button_inactive"
@@ -130,8 +129,7 @@
               required
               placeholder="Title"
             />
-            <span class="modal__error" id="modal-card-title-input-error"
-              >Please fill out this field.
+            <span class="modal__error" id="modal-card-title-input-error">
             </span>
             <input
               class="modal__form-input modal__form-input_error"
@@ -145,8 +143,7 @@
               class="modal__error modal__error_visible"
               id="modal-card-image-input-error"
             >
-              Please enter a URL.</span
-            >
+            </span>
             <button
               class="modal__form-button modal__form-button_inactive"
               type="submit"
@@ -162,9 +159,12 @@
     <!--^Add Modal^-->
     <div class="modal" id="card-image-modal">
       <div class="modal__container-card">
+        <button
+          class="modal__close modal-card-close"
+          id="card-close-image"
+        ></button>
         <img class="modal__image-card" id="modal-card-image" src="#" alt="#" />
         <p class="modal__caption-card" id="modal-card-caption"></p>
-        <button class="modal__close" id="card-close-image"></button>
       </div>
     </div>
     <template id="card-template">
