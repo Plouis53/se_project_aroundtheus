@@ -14,8 +14,7 @@ function enableValidation(options) {
 
 /*2*/
 function setEventListeners(formElements, options) {
-  const { inputSelector } = options;
-  const { submitButtonSelector } = options;
+  const { inputSelector, submitButtonSelector } = options;
   const inputList = [...formElements.querySelectorAll(inputSelector)];
   const submitButton = formElements.querySelector(submitButtonSelector);
 
