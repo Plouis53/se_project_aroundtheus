@@ -67,17 +67,17 @@ const modals = document.querySelectorAll(".modal");
 /* Functions*/
 //---Sprint 5 & 6 -->
 
-function closePopUp(popUp) {
-  document.removeEventListener("keydown", closeByEscape);
-  popUp.classList.remove("modal_opened");
+function closePopUp(modal) {
+  document.removeEventListener("keydown", closeModalByEscape);
+  modal.classList.remove("modal_opened");
 }
 
-function openPopUp(popUp) {
-  document.addEventListener("keydown", closeByEscape);
-  popUp.classList.add("modal_opened");
+function openPopUp(modal) {
+  document.addEventListener("keydown", closeModalByEscape);
+  modal.classList.add("modal_opened");
 }
 
-function closeByEscape(e) {
+function closeModalByEscape(e) {
   if (e.key === "Escape") {
     const modalOpened = document.querySelector(".modal_opened");
     closePopUp(modalOpened);
