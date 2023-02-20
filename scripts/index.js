@@ -60,16 +60,31 @@ const modalCardPicture = cardImageModal.querySelector("#modal-card-image");
 const cardImageModalCloseButton = document.querySelector("#card-close-image");
 //---^Sprint 5^ -->
 
+//---Sprint 6 -->
+const modals = document.querySelectorAll(".modal");
+//---^Sprint 6^ -->
+
 /* Functions*/
-//---Sprint 5 -->
+//---Sprint 5 & 6 -->
 
-function closePopUp(modal) {
-  modal.classList.remove("modal_opened");
+function closePopUp(popUp) {
+  document.removeEventListener("keydown", closeByEscape);
+  popUp.classList.remove("modal_opened");
 }
 
-function openPopUp(modal) {
-  modal.classList.add("modal_opened");
+function openPopUp(popUp) {
+  document.addEventListener("keydown", closeByEscape);
+  popUp.classList.add("modal_opened");
 }
+
+function closeByEscape(e) {
+  if (e.key === "Escape") {
+    const modalOpened = document.querySelector(".modal_opened");
+    closePopUp(modalOpened);
+  }
+}
+
+//---^Sprint 6^ -->
 
 function renderCard(cardElement, container) {
   container.prepend(cardElement);
@@ -130,6 +145,15 @@ function handleCardImageModal(cardData) {
 }
 //---^Sprint 5^ -->
 /* Event Listener */
+//---Sprint 6 -->
+modals.forEach((modal) => {
+  modal.addEventListener("mousedown", (e) => {
+    if (e.target.classList.contains("modal")) {
+      closePopUp(modal);
+    }
+  });
+});
+//---^Sprint 6^-->
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
