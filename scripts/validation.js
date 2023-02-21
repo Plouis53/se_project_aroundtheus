@@ -13,35 +13,35 @@ function enableValidation(options) {
 /*2*/
 function showInputError(
   formElements,
-  inputElements,
+  inputElement,
   { inputErrorClass, errorClass }
 ) {
   const errorMessageElements = formElements.querySelector(
-    `#${inputElements.id}-error`
+    `#${inputElement.id}-error`
   );
-  inputElements.classList.add(inputErrorClass);
-  errorMessageElements.textContent = inputElements.validationMessage;
+  inputElement.classList.add(inputErrorClass);
+  errorMessageElements.textContent = inputElement.validationMessage;
   errorMessageElements.classList.add(errorClass);
 }
 /*3*/
 function hideInputError(
   formElements,
-  inputElements,
+  inputElement,
   { inputErrorClass, errorClass }
 ) {
   const errorMessageElements = formElements.querySelector(
-    `#${inputElements.id}-error`
+    `#${inputElement.id}-error`
   );
-  inputElements.classList.remove(inputErrorClass);
-  errorMessageElements.textContent = inputElements.validationMessage;
+  inputElement.classList.remove(inputErrorClass);
+  errorMessageElements.textContent = inputElement.validationMessage;
   errorMessageElements.classList.remove(errorClass);
 }
 /*4*/
-function checkInputValidity(formElements, inputElements, options) {
-  if (!inputElements.validity.valid) {
-    return showInputError(formElements, inputElements, options);
+function checkInputValidity(formElements, inputElement, options) {
+  if (!inputElement.validity.valid) {
+    return showInputError(formElements, inputElement, options);
   }
-  hideInputError(formElements, inputElements, options);
+  hideInputError(formElements, inputElement, options);
 }
 /*5*/
 function hasInvalidInput(inputList) {
@@ -80,9 +80,9 @@ function setEventListeners(formElements, options) {
 
   toggleButtonState(inputElements, submitButton, options);
 
-  inputElements.forEach((inputElements) => {
+  inputElements.forEach((inputElement) => {
     inputElements.addEventListener("input", () => {
-      checkInputValidity(formElements, inputElements, options);
+      checkInputValidity(formElements, inputElement, options);
       toggleButtonState(inputElements, submitButton, options);
     });
   });
