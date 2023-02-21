@@ -101,6 +101,7 @@ const options = {
   inputErrorClass: "modal__form-input_error",
   errorClass: "modal__error_visible",
 };
+//---^Sprint 6^ -->
 
 enableValidation(options);
 /* ---------------------------- ^Validation Object^ --------------------------- */
