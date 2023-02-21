@@ -81,11 +81,11 @@ function setEventListeners(formElements, options) {
   toggleButtonState(inputElements, submitButton, options);
 
   inputElements.forEach((inputElement) => {
-    inputElements.addEventListener("input", () => {
+    inputElement.addEventListener("input", () => {
       checkInputValidity(formElements, inputElement, options);
       toggleButtonState(inputElements, submitButton, options);
     });
-  });
+  }); 
 
   formElements.addEventListener("reset", () => {
     setTimeout(() => {
