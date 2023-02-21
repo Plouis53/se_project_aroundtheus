@@ -1,44 +1,69 @@
 //---Sprint 6 -->
 
 /*1*/
+
 function enableValidation(options) {
-  const formElements = [...document.querySelectorAll(options.formSelector)];
-  formElements.forEach((formElements) => {
+  const forms = Array.from(document.querySelectorAll(options.formSelector));
+  forms.forEach((formElements) => {
     formElements.addEventListener("submit", (e) => {
-      e.preventDefault;
+      e.preventDefault();
     });
 
     setEventListeners(formElements, options);
   });
 }
 
+//---Sprint 6 -->
 /*2*/
 function setEventListeners(formElements, options) {
   const { inputSelector, submitButtonSelector } = options;
-  const inputList = [...formElements.querySelectorAll(inputSelector)];
+  const inputElements = Array.from(
+    formElements.querySelectorAll(options.inputSelector)
+  );
   const submitButton = formElements.querySelector(submitButtonSelector);
+
+  toggleButtonState(inputElements, submitButton, options);
 
   formElements.addEventListener("reset", () => {
     setTimeout(() => {
-      toggleButtonState(inputList, submitButton, options);
-    });
-  });
-
-  inputList.forEach((inputElements) => {
-    inputElements.addEventListener("input", (e) => {
-      checkInputValidity(formElements, inputElements, options);
-      toggleButtonState(inputList, submitButton, options);
-    });
+      toggleButtonState(inputElements, submitButton, options);
+    },0);
   });
 }
 
+  //---^^Sprint 6^^-->
+  inputElements.forEach((inputElements) => {
+    inputElements.addEventListener("input", (e) => {
+      checkInputValidity(formElements, inputElements, options);
+      toggleButtonState(inputElements, submitButton, options);
+    });
+  });
+
+//---^Sprint 6^ -->
+
 /*3*/
+//---Sprint 6 -->
 function checkInputValidity(formElements, inputElements, options) {
   if (!inputElements.validity.valid) {
     return showInputError(formElements, inputElements, options);
   }
   hideInputError(formElements, inputElements, options);
 }
+
+function hasInvalidInput(inputList) {
+  return !inputList.every((inputElement) => inputElement.validity.valid);
+}
+
+function disableSubmitButton(submitButton, { inactiveButtonClass }) {
+  submitButton.classList.add(inactiveButtonClass);
+  submitButton.disabled = true;
+}
+
+function enableSubmitButton(submitButton, { inactiveButtonClass }) {
+  submitButton.classList.remove(inactiveButtonClass);
+  submitButton.disabled = false;
+}
+//---^Sprint 6^ -->
 
 function showInputError(
   formElements,
@@ -53,6 +78,8 @@ function showInputError(
   errorMessageElements.classList.add(errorClass);
 }
 
+//---^^Sprint 6^^ -->
+
 function hideInputError(
   formElements,
   inputElements,
@@ -62,25 +89,35 @@ function hideInputError(
     `#${inputElements.id}-error`
   );
   inputElements.classList.remove(inputErrorClass);
-  console.log(`#${inputElements.id}-error`);
-  errorMessageElements.textContent = " ";
+  errorMessageElements.textContent = inputElements.validationMessage;
   errorMessageElements.classList.remove(errorClass);
 }
+//--^Sprint 6^-->
+
+//---Sprint 6 -->
 function toggleButtonState(inputList, submitButton, { inactiveButtonClass }) {
-  let foundInvalid = false;
-
-  inputList.forEach((inputElements) => {
-    if (!inputElements.validity.valid) {
-      foundInvalid = true;
-    }
-  });
-
-  if (foundInvalid) {
-    submitButton.classList.add(inactiveButtonClass);
-    return (submitButton.disabled = true);
+  if (hasInvalidInput(inputList)) {
+    disableSubmitButton(submitButton, { inactiveButtonClass });
+  } else {
+    enableSubmitButton(submitButton, { inactiveButtonClass });
   }
-  submitButton.classList.remove(inactiveButtonClass);
-  submitButton.disabled = false;
+}
+//---^Sprint 6^ -->
+
+inputList.forEach((inputElements) => {
+  inputElements.addEventListener("input", () => {
+    checkInputValidity(formElements, inputElements, options);
+    toggleButtonState(inputElements, submitButton, options);
+  });
+});
+
+if (foundInvalid) {
+  submitButton.classList.add(inactiveButtonClass);
+ (submitButton.disabled = true);
+ return;
+}
+submitButton.classList.remove(inactiveButtonClass);
+submitButton.disabled = false; 
 }
 
 /* ---------------------------- Validation Object --------------------------- */
