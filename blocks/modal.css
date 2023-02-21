@@ -8,7 +8,6 @@
   z-index: 999;
   padding: 0 19px;
   visibility: hidden;
-  display: flex;
   opacity: 0;
   transition: visibility 0s linear 0.3s, opacity 0.3s linear;
   display: flex;
@@ -141,11 +140,6 @@
   bottom: calc(100% + 3px);
   left: calc(100% + 3px);
   transition: 0.2s ease;
-}
-
-.modal-card-close:hover {
-  opacity: 0.6;
-  cursor: pointer;
 }
 
 .modal__container-card {
