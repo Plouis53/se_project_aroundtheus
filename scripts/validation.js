@@ -45,7 +45,8 @@ function checkInputValidity(formElements, inputElements, options) {
 }
 /*5*/
 function hasInvalidInput(inputList) {
-  return !inputList.every((inputElements) => inputElements.validity.valid);
+  console.log(inputList);
+  return inputList.some((inputElement) => !inputElement.validity.valid);
 }
 /*6*/
 function disableSubmitButton(submitButton, { inactiveButtonClass }) {
@@ -63,6 +64,7 @@ function toggleButtonState(
   submitButton,
   { inactiveButtonClass }
 ) {
+  console.log(hasInvalidInput(inputElements));
   if (hasInvalidInput(inputElements)) {
     disableSubmitButton(submitButton, { inactiveButtonClass });
   } else {
