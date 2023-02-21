@@ -125,11 +125,6 @@
   color: rgba(0, 0, 0, 0.2);
 }
 
-.modal__close:hover {
-  opacity: 0.6;
-  cursor: pointer;
-}
-
 .modal-card-close {
   background-color: transparent;
   background-size: contain;
