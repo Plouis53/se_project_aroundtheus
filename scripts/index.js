@@ -69,13 +69,13 @@ const modals = document.querySelectorAll(".modal");
 
 function closePopUp(modal) {
   document.removeEventListener("keydown", closeModalByEscape);
-  /*document.removeEventListener("mousedown", handleOverlay);*/
+  document.removeEventListener("mousedown", handleOverlay);
   modal.classList.remove("modal_opened");
 }
 
 function openPopUp(modal) {
   document.addEventListener("keydown", closeModalByEscape);
-  /*document.addEventListener("mousedown", handleOverlay);*/
+  document.addEventListener("mousedown", handleOverlay);
   modal.classList.add("modal_opened");
 }
 
@@ -86,9 +86,11 @@ function closeModalByEscape(e) {
   }
 }
 
-/*function handleOverlay(e) {
+function handleOverlay(e) {
   if (e.target.classList.contains("modal_opened")) {
-    closePopUp(e.target);*/
+    closePopUp(e.target);
+  }
+}
 
 //---^Sprint 6^ -->
 
