@@ -33,6 +33,7 @@ const cardData = {
 };
 
 const card = new Card(cardData);
+card.getView() 
 
 /* Elements*/
 //---Sprint 4 -->

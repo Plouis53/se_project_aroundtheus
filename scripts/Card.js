@@ -1,8 +1,15 @@
 export default class Card {
   constructor({ name, link }) {
-    this.name = name;
-    console.log(this);
+    this._name = name;
+    this._link=link;
+    
   }
 }
 
-testMethod (){}
+testMethod (){
+    console.log(this.name);
+}
+
+getView(){
+
+}
