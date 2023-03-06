@@ -166,7 +166,7 @@ function handleAddCardSubmit(e) {
   closePopUp(addNewCardModal);
 }
 
-function deleteCard(e) {
+function deleteCardIcon(e) {
   e.target.closest(".card").remove();
 }
 
