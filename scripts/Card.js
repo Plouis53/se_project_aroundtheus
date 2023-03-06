@@ -12,14 +12,14 @@ class Card {
       .querySelectorAll(".card__like-button_active")
       .addEventListener("click", this._handleLikeIcon);
     this._element
-      .querySelectorAll("#deleteCard")
+      .querySelectorAll("#modal-card-delete-button")
       .addEventListener("click", this._handleDeleteCard);
     this._element
       .querySelectorAll(".card__image")
-      .addEventListener("click", this._handleCardImage);
+      .addEventListener("click", this._handleCardImageModal);
   }
 
-  _handleCardImage(cardData, cardImageModal, modalCardPicture, modalCaption) {
+  _handleCardImageModal(cardData, cardImageModal, modalCardPicture, modalCaption) {
     const addCardTitle = document.querySelector("#card-title");
     const cardImage = document.querySelector("#modal-card-image");
 
