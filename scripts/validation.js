@@ -85,7 +85,7 @@ function setEventListeners(formElements, options) {
       checkInputValidity(formElements, inputElement, options);
       toggleButtonState(inputElements, submitButton, options);
     });
-  }); 
+  });
 
   formElements.addEventListener("reset", () => {
     setTimeout(() => {
@@ -95,6 +95,7 @@ function setEventListeners(formElements, options) {
 }
 
 /* ---------------------------- Validation Object --------------------------- */
+
 const options = {
   formSelector: ".modal__form",
   inputSelector: ".modal__form-input",

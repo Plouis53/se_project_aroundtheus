@@ -1,4 +1,5 @@
 import Card from "./Card.js";
+import formValidator from "./formValidator.js";
 
 const initialCards = [
   {
@@ -70,6 +71,11 @@ const modalCardPicture = cardImageModal.querySelector("#modal-card-image");
 const cardImageModalCloseButton = document.querySelector("#card-close-image");
 //---^Sprint 5^ -->
 
+//---Sprint 7 -->
+const cardSelector="#card-template"; 
+//---^Sprint 7^ -->
+
+
 //---Sprint 6 -->
 const modals = document.querySelectorAll(".modal");
 //---^Sprint 6^ -->
@@ -107,6 +113,11 @@ function handleOverlay(e) {
 function renderCard(cardElement, container) {
   container.prepend(cardElement);
 }
+
+function handleImageClick() {
+  cardData.open(cardImageModal);
+}
+
 
 function deleteCard(e) {
   e.target.closest(".card").remove();
@@ -214,3 +225,32 @@ initialCards.forEach((cardData) => {
   const cardView = getCardView(cardData);
   renderCard(cardView, cardListElement);
 });
+
+/* ---------------------------- FormValidator.js ---------------------------- */
+const validationSettings = {
+  inputSelector: ".modal__form-input",
+  submitButtonSelector: ".modal__form-button",
+  inactiveButtonClass: "modal__form-button_inactive",
+  inputErrorClass: "modal__form-input_error",
+  errorClass: "modal__error_visible",
+};
+
+const editFormValidator = new formValidator(options, document.querySelector(".modal__form"));
+editFormValidator.enableValidation();
+
+const addFormValidator = new formValidator(options, document.querySelector('.modal__form'));
+addFormValidator.enableValidation();
+
+
+
+/*const editFormValidator = new formValidator(
+  validationSettings,
+  ProfileEditModal
+);
+const addFormValidator = new formValidator(
+  validationSettings,
+  CardAddModal
+);
+
+editFormValidator.enableValidation();
+addFormValidator.enableValidation();
