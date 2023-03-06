@@ -236,21 +236,11 @@ const validationSettings = {
 };
 
 const editFormValidator = new formValidator(options, document.querySelector(".modal__form"));
-editFormValidator.enableValidation();
+ProfileEditModal.enableValidation();
 
 const addFormValidator = new formValidator(options, document.querySelector('.modal__form'));
-addFormValidator.enableValidation();
+CardAddModal.enableValidation();
 
-
-
-/*const editFormValidator = new formValidator(
-  validationSettings,
-  ProfileEditModal
-);
-const addFormValidator = new formValidator(
-  validationSettings,
-  CardAddModal
-);
 
 editFormValidator.enableValidation();
 addFormValidator.enableValidation();
