@@ -28,14 +28,6 @@ const initialCards = [
   },
 ];
 
-const cardData = {
-  name: "Yosemite Valley",
-  link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
-};
-
-const card = new Card(cardData);
-card.getView();
-
 /* Elements*/
 //---Sprint 4 -->
 const profileEditButton = document.querySelector("#profile-edit-button");
@@ -47,6 +39,10 @@ const profileTitleInput = document.querySelector("#profile-title-input");
 const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
+
+//---Sprint 7 -->
+const profilemodalform = document.querySelector(".modal__form");
+const modaladdcardform = document.querySelector(".modal__form");
 //---^Sprint 4 ^-->
 
 //---Sprint 5 -->
@@ -234,7 +230,6 @@ const validationSettings = {
 };
 
 const editFormValidator = new formValidator(
-  options,
   document.querySelector(".modal__form")
 );
 profilemodalform.enableValidation();
