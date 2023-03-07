@@ -34,7 +34,7 @@ const cardData = {
 };
 
 const card = new Card(cardData);
-card.getView() 
+card.getView();
 
 /* Elements*/
 //---Sprint 4 -->
@@ -72,9 +72,8 @@ const cardImageModalCloseButton = document.querySelector("#card-close-image");
 //---^Sprint 5^ -->
 
 //---Sprint 7 -->
-const cardSelector="#card-template"; 
+const cardSelector = "#card-template";
 //---^Sprint 7^ -->
-
 
 //---Sprint 6 -->
 const modals = document.querySelectorAll(".modal");
@@ -118,7 +117,6 @@ function handleImageClick() {
   cardData.open(cardImageModal);
 }
 
-
 function deleteCard(e) {
   e.target.closest(".card").remove();
 }
@@ -136,7 +134,7 @@ function getCardView(cardData) {
     cardLikeButton.classList.toggle("card__like-button_active");
   });
 
-  cardDeleteButton.addEventListener("click", deleteCard);
+  cardDeleteButton.addEventListener("click", deleteCardIcon);
 
   cardImageElement.addEventListener("click", () => {
     handleCardImageModal(cardData);
@@ -235,12 +233,19 @@ const validationSettings = {
   errorClass: "modal__error_visible",
 };
 
-const editFormValidator = new formValidator(options, document.querySelector(".modal__form"));
-ProfileEditModal.enableValidation();
+const editFormValidator = new formValidator(
+  options,
+  document.querySelector(".modal__form")
+);
+profilemodalform.enableValidation();
 
-const addFormValidator = new formValidator(options, document.querySelector('.modal__form'));
-CardAddModal.enableValidation();
-
+const addFormValidator = new formValidator(
+  options,
+  document.querySelector(".modal__form")
+);
+modaladdcardform.enableValidation();
 
 editFormValidator.enableValidation();
 addFormValidator.enableValidation();
+
+export { handleImageClick };
