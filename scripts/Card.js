@@ -1,15 +1,15 @@
 import { handleImageClick } from "./index.js";
-class Card {
+export default class Card {
   constructor(data, cardSelector) {
-    this._name.data.name;
-    this._link.data.name;
+    this._name = data.name;
+    this._link = data.name;
 
     this._cardSelector = cardSelector;
   }
 
   _setEventListeners() {
     this._element
-      .querySelectorAll(".card__like-button_active")
+      .querySelectorAll(".card__like-button")
       .addEventListener("click", this._handleLikeIcon);
     this._element
       .querySelectorAll("#modal-card-delete-button")
@@ -19,7 +19,12 @@ class Card {
       .addEventListener("click", this._handleCardImageModal);
   }
 
-  _handleCardImageModal(cardData, cardImageModal, modalCardPicture, modalCaption) {
+  _handleCardImageModal(
+    cardData,
+    cardImageModal,
+    modalCardPicture,
+    modalCaption
+  ) {
     const addCardTitle = document.querySelector("#card-title");
     const cardImage = document.querySelector("#modal-card-image");
 
@@ -35,19 +40,24 @@ class Card {
   }
 
   _handleLikeIcon() {
-    this._cardLikeButton.classList.toggle("card__like-button_active");
+    this._element
+      .querySelectorAll(".card__like-button")
+      .classList.toggle("card__like-button_active");
   }
 
   _getTemplate() {
-    return document
+    const cardElement = document
       .querySelectorAll(this._cardSelector)
       .content.querySelector(".card")
       .cloneNode(true);
+
+    return cardElement;
   }
 
   _getView() {
     this._element.this._getTemplate();
     this._setEventListeners();
+    return this._element;
   }
 
   renderCard() {
@@ -68,5 +78,3 @@ class Card {
     return this._element;
   }
 }
-
-export default Card;
