@@ -29,7 +29,7 @@ class formValidator {
         this._toggleButtonState();
       });
     });
-  };
+  }
 
   _toggleButtonState(){
     const validInput = this._hasInvalidInput();
@@ -44,7 +44,7 @@ class formValidator {
   }
   
   _hasInvalidInput(){
-    this._inputElements.every((input) => input.validity.valid);
+    return !this._inputElements.every((input) => input.validity.valid);
   }
 
   _checkInputValidity(inputElement){
@@ -63,7 +63,7 @@ class formValidator {
       errorMessageElements.textContent = inputElement.validationMessage;
       errorMessageElements.classList.add(this._errorClass);
     }
-  }
+  
 
   _hideInputError (inputElement) {
     const errorMessageElements = this._form.querySelector(
@@ -81,5 +81,5 @@ class formValidator {
     this._setEventListeners(); 
 
   }
-
+}
   export default formValidator; 
