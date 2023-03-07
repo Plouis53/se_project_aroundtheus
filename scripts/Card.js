@@ -1,8 +1,9 @@
-import {handleImageClick} from "./index.js";
+import { handleImageClick } from "./index.js";
 export default class Card {
-  constructor(data, cardSelector) {
+  constructor(data, cardSelector, handleImageClick) {
     this._name = data.name;
     this._link = data.name;
+    this._handleImageClick = handleImageClick;
 
     this._cardSelector = cardSelector;
   }

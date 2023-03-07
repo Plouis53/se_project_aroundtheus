@@ -39,11 +39,12 @@ const profileTitleInput = document.querySelector("#profile-title-input");
 const profileDescriptionInput = document.querySelector(
   "#profile-description-input"
 );
+//---^Sprint 4 ^-->
 
 //---Sprint 7 -->
-const profilemodalform = document.querySelector(".modal__form");
-const modaladdcardform = document.querySelector(".modal__form");
-//---^Sprint 4 ^-->
+const profilemodalform = document.querySelector("#profile-modal-form");
+const modaladdcardform = document.querySelector("#modal-add-card-form");
+//---^Sprint 7 ^-->
 
 //---Sprint 5 -->
 const addNewCardModal = document.querySelector("#card-add-modal");
@@ -164,6 +165,25 @@ function deleteCardIcon(e) {
   e.target.closest(".card").remove();
 }
 
+const validationSettings = {
+  inputSelector: ".modal__form-input",
+  submitButtonSelector: ".modal__form-button",
+  // instead of submitButtonSelector single selector, you need two different selectors
+  inactiveButtonClass: "modal__form-button_inactive",
+  inputErrorClass: "modal__form-input_error",
+  errorClass: "modal__error_visible",
+};
+
+const editFormValidator = new formValidator(
+  validationSettings,
+  profilemodalform
+);
+
+const addFormValidator = new formValidator(
+  validationSettings,
+  modaladdcardform
+);
+
 function handleCardImageModal(cardData) {
   modalCardPicture.src = cardData.link;
   modalCardPicture.alt = cardData.name;
@@ -184,10 +204,12 @@ modals.forEach((modal) => {
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
+  editFormValidator.enableValidation();
   openPopUp(profileEditModal);
 });
 
 addNewCardButton.addEventListener("click", () => {
+  addFormValidator.enableValidation();
   openPopUp(addNewCardModal);
 });
 
@@ -220,27 +242,8 @@ initialCards.forEach((cardData) => {
   renderCard(cardView, cardListElement);
 });
 
+//---Sprint 7 -->
 /* ---------------------------- FormValidator.js ---------------------------- */
-const validationSettings = {
-  inputSelector: ".modal__form-input",
-  submitButtonSelector: ".modal__form-button",
-  inactiveButtonClass: "modal__form-button_inactive",
-  inputErrorClass: "modal__form-input_error",
-  errorClass: "modal__error_visible",
-};
-
-const editFormValidator = new formValidator(
-  document.querySelector(".modal__form")
-);
-profilemodalform.enableValidation();
-
-const addFormValidator = new formValidator(
-  options,
-  document.querySelector(".modal__form")
-);
-modaladdcardform.enableValidation();
-
-editFormValidator.enableValidation();
-addFormValidator.enableValidation();
 
 export { handleImageClick };
+//---^Sprint 7^ -->
