@@ -123,9 +123,7 @@ function getCardView(cardData) {
   const cardImageElement = cardElement.querySelector(".card__image");
   const cardTitleElement = cardElement.querySelector(".card__title");
   const cardLikeButton = cardElement.querySelector(".card__like-button");
-  const cardDeleteButton = cardElement.querySelector(
-    "#modal-card-delete-button"
-  );
+  const cardDeleteButton = cardElement.querySelector(".card__delete-button");
 
   cardLikeButton.addEventListener("click", () => {
     cardLikeButton.classList.toggle("card__like-button_active");
