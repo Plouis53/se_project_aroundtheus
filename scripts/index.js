@@ -243,5 +243,5 @@ initialCards.forEach((cardData) => {
 //---Sprint 7 -->
 /* ---------------------------- FormValidator.js ---------------------------- */
 
-export { handleImageClick };
+export { openPopUp };
 //---^Sprint 7^ -->

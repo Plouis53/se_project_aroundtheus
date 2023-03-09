@@ -1,4 +1,4 @@
-import { handleImageClick } from "./index.js";
+import { openPopUp } from "./index.js";
 export default class Card {
   constructor(data, cardSelector, handleImageClick) {
     this._name = data.name;
@@ -37,12 +37,12 @@ export default class Card {
   }
 
   _handleDeleteCard() {
-    this._element.remove();
+    this._element = null;
   }
 
   _handleLikeIcon() {
     this._element
-      .querySelectorAll(".card__like-button")
+      .querySelectorAll(this._cardLikeButton)
       .classList.toggle("card__like-button_active");
   }
 
@@ -53,12 +53,6 @@ export default class Card {
       .cloneNode(true);
 
     return cardElement;
-  }
-
-  _getView() {
-    this._element.this._getTemplate();
-    this._setEventListeners();
-    return this._element;
   }
 
   renderCard() {
