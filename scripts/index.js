@@ -1,5 +1,5 @@
 import Card from "./Card.js";
-import formValidator from "./formValidator.js";
+import FormValidator from "./FormValidator.js";
 
 const initialCards = [
   {
@@ -42,8 +42,8 @@ const profileDescriptionInput = document.querySelector(
 //---^Sprint 4 ^-->
 
 //---Sprint 7 -->
-const profilemodalform = document.querySelector("#profile-modal-form");
-const modaladdcardform = document.querySelector("#modal-add-card-form");
+const profileModalForm = document.querySelector("#profile-modal-form");
+const modalAddCardForm = document.querySelector("#modal-add-card-form");
 //---^Sprint 7 ^-->
 
 //---Sprint 5 -->
@@ -172,14 +172,14 @@ const validationSettings = {
   errorClass: "modal__error_visible",
 };
 
-const editFormValidator = new formValidator(
+const editFormValidator = new FormValidator(
   validationSettings,
-  profilemodalform
+  profileModalForm
 );
 
-const addFormValidator = new formValidator(
+const addFormValidator = new FormValidator(
   validationSettings,
-  modaladdcardform
+  modalAddCardForm
 );
 
 function handleCardImageModal(cardData) {
