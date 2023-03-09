@@ -66,6 +66,7 @@ export default class Card {
     this._cardImage.src = this._link;
     this._cardImage.alt = `Photo of ${this._name}`;
     this._addCardTitle.textContent = this._name;
+    const CardTitle = document.querySelector(".card_title");
 
     this._setEventListeners();
 
