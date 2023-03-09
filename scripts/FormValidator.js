@@ -29,9 +29,9 @@ class FormValidator {
   }
 
   _toggleButtonState() {
-    const validInput = this._hasInvalidInput();
+    const isFormValid = this._hasInvalidInput();
 
-    if (validInput) {
+    if (isFormValid) {
       this._submitButton.classList.add(this._inactiveButtonClass);
       this._submitButton.disabled = true;
     } else {

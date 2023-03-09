@@ -80,31 +80,6 @@ const modals = document.querySelectorAll(".modal");
 /* Functions*/
 //---Sprint 5 & 6 -->
 
-/*function closePopUp(modal) {
-  document.removeEventListener("keydown", closeModalByEscape);
-  document.removeEventListener("mousedown", handleOverlay);
-  modal.classList.remove("modal_opened");
-}
-
-function openPopUp(modal) {
-  document.addEventListener("keydown", closeModalByEscape);
-  document.addEventListener("mousedown", handleOverlay);
-  modal.classList.add("modal_opened");
-}
-
-function closeModalByEscape(e) {
-  if (e.key === "Escape") {
-    const modalOpened = document.querySelector(".modal_opened");
-    closePopUp(modalOpened);
-  }
-}
-
-function handleOverlay(e) {
-  if (e.target.classList.contains("modal_opened")) {
-    closePopUp(e.target);
-  }
-}*/
-
 //---^Sprint 6^ -->
 
 function renderCard(cardElement, container) {
@@ -192,13 +167,6 @@ function handleCardImageModal(cardData) {
 //---^Sprint 5^ -->
 /* Event Listener */
 //---Sprint 6 -->
-modals.forEach((modal) => {
-  modal.addEventListener("mousedown", (e) => {
-    if (e.target.classList.contains("modal")) {
-      closePopUp(modal);
-    }
-  });
-});
 //---^Sprint 6^-->
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
@@ -234,6 +202,7 @@ cardAddForm.addEventListener("submit", (e) => {
   renderCard(cardView, cardListElement);
   closePopUp(addNewCardModal);
   cardAddForm.reset();
+  addFormValidator.toggleButtonState();
 });
 
 initialCards.forEach((cardData) => {
