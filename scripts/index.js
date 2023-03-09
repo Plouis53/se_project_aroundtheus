@@ -1,5 +1,6 @@
 import Card from "./Card.js";
 import FormValidator from "./FormValidator.js";
+import { openPopUp, closePopUp } from "./utils.js";
 
 const initialCards = [
   {
@@ -79,7 +80,7 @@ const modals = document.querySelectorAll(".modal");
 /* Functions*/
 //---Sprint 5 & 6 -->
 
-function closePopUp(modal) {
+/*function closePopUp(modal) {
   document.removeEventListener("keydown", closeModalByEscape);
   document.removeEventListener("mousedown", handleOverlay);
   modal.classList.remove("modal_opened");
@@ -102,7 +103,7 @@ function handleOverlay(e) {
   if (e.target.classList.contains("modal_opened")) {
     closePopUp(e.target);
   }
-}
+}*/
 
 //---^Sprint 6^ -->
 
