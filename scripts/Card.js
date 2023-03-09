@@ -20,31 +20,30 @@ export default class Card {
       .addEventListener("click", this._handleCardImageModal);
   }
 
-  _handleCardImageModal(
+  _handleCardImageModal = (
     cardData,
     cardImageModal,
     modalCardPicture,
     modalCaption
-  ) {
+  ) => {
     const addCardTitle = document.querySelector("#card-title");
     const cardImage = document.querySelector("#modal-card-image");
 
-    modalCardPicture.src = cardData.link;
-    modalCardPicture.alt = cardData.name;
-    modalCaption.textContent = cardData.name;
-    cardData(cardImageModal);
-    handleImageClick();
-  }
+    modalCardPicture.src = this._link;
+    modalCardPicture.alt = this._name;
+    modalCaption.textContent = this._name;
+    openPopUp(cardImageModal);
+  };
 
-  _handleDeleteCard() {
+  _handleDeleteCard = () => {
     this._element = null;
-  }
+  };
 
-  _handleLikeIcon() {
+  _handleLikeIcon = () => {
     this._element
       .querySelectorAll(this._cardLikeButton)
       .classList.toggle("card__like-button_active");
-  }
+  };
 
   _getTemplate() {
     const cardElement = document
