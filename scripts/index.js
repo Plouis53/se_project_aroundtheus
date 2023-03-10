@@ -82,6 +82,10 @@ const modals = document.querySelectorAll(".modal");
 
 //---^Sprint 6^ -->
 
+/* ???? function getCardView(cardData) {
+  const card = new Card(cardData, cardSelector);
+  return card.getView();}*/
+
 function renderCard(cardElement, container) {
   container.prepend(cardElement);
 }
@@ -139,24 +143,39 @@ function deleteCardIcon(e) {
   e.target.closest(".card").remove();
 }
 
+// Validation//
 const validationSettings = {
   inputSelector: ".modal__form-input",
   submitButtonSelector: ".modal__button",
-  // instead of submitButtonSelector single selector, you need two different selectors
   inactiveButtonClass: "modal__form-button_inactive",
   inputErrorClass: "modal__form-input_error",
   errorClass: "modal__error_visible",
 };
 
-const editFormValidator = new FormValidator(
-  validationSettings,
+/*????const editFormValidator = new FormValidator(options, document.querySelector("#profile-modal-form"));
+editFormValidator.enableValidation();
+
+const addFormValidator = new FormValidator(options, document.querySelector("#modal-card-add-form"));
+addFormValidator.enableValidation(); */
+
+/*const editFormValidator = new FormValidator(
+  options,
+  document.querySelector("#profile-modal-form")
+);
+editFormValidator.enableValidation();
+
+/*validationSettings,
   profileModalForm
 );
 
 const addFormValidator = new FormValidator(
-  validationSettings,
-  modalAddCardForm
+  options,
+  document.querySelector("#modal-add-card-form")
 );
+addFormValidator.enableValidation();
+/*validationSettings,
+  modalAddCardForm
+);*/
 
 function handleCardImageModal(cardData) {
   modalCardPicture.src = cardData.link;
@@ -202,7 +221,6 @@ cardAddForm.addEventListener("submit", (e) => {
   renderCard(cardView, cardListElement);
   closePopUp(addNewCardModal);
   cardAddForm.reset();
-  addFormValidator.toggleButtonState();
 });
 
 initialCards.forEach((cardData) => {
