@@ -141,7 +141,7 @@ function deleteCardIcon(e) {
 
 const validationSettings = {
   inputSelector: ".modal__form-input",
-  submitButtonSelector: ".modal__form-button",
+  submitButtonSelector: ".modal__button",
   // instead of submitButtonSelector single selector, you need two different selectors
   inactiveButtonClass: "modal__form-button_inactive",
   inputErrorClass: "modal__form-input_error",
