@@ -152,6 +152,20 @@ const validationSettings = {
   errorClass: "modal__error_visible",
 };
 
+/*const editFormValidator = new FormValidator(
+  validationSettings,
+  document.querySelector("#profile-modal-form")
+);
+editFormValidator.enableValidation();
+
+
+
+/*const addFormValidator = new FormValidator(
+  validationSettings,
+  document.querySelector("#modal-card-add-form")
+);
+addFormValidator.enableValidation();
+
 /*????const editFormValidator = new FormValidator(options, document.querySelector("#profile-modal-form"));
 editFormValidator.enableValidation();
 
@@ -190,12 +204,12 @@ function handleCardImageModal(cardData) {
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
-  editFormValidator.enableValidation();
+  editFormValidator.resetValidation();
   openPopUp(profileEditModal);
 });
 
 addNewCardButton.addEventListener("click", () => {
-  addFormValidator.enableValidation();
+  addFormValidator.resetValidation();
   openPopUp(addNewCardModal);
 });
 
