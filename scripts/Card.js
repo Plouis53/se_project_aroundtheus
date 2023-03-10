@@ -1,4 +1,4 @@
-import { openPopUp } from "./index.js";
+import { openPopUp } from "./utils.js";
 export default class Card {
   constructor(data, cardSelector, handleImageClick) {
     this._name = data.name;
@@ -9,15 +9,9 @@ export default class Card {
   }
 
   _setEventListeners() {
-    this._element
-      .querySelectorAll(".card__like-button")
-      .addEventListener("click", this._handleLikeIcon);
-    this._element
-      .querySelectorAll("#modal-card-delete-button")
-      .addEventListener("click", this._handleDeleteCard);
-    this._element
-      .querySelectorAll(".card__image")
-      .addEventListener("click", this._handleCardImageModal);
+    this._element.addEventListener("click", this._handleLikeIcon);
+    this._element.addEventListener("click", this._handleDeleteCard);
+    this._element.addEventListener("click", this._handleCardImageModal);
   }
 
   _handleCardImageModal = (
@@ -36,7 +30,7 @@ export default class Card {
   };
 
   _handleDeleteCard = () => {
-    this._element = null;
+    this._element.remove();
   };
 
   _handleLikeIcon = () => {
@@ -66,7 +60,6 @@ export default class Card {
     this._cardImage.src = this._link;
     this._cardImage.alt = `Photo of ${this._name}`;
     this._addCardTitle.textContent = this._name;
-    const CardTitle = document.querySelector(".card_title");
 
     this._setEventListeners();
 
