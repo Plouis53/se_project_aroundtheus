@@ -74,17 +74,15 @@ const cardSelector = "#card-template";
 //---^Sprint 7^ -->
 
 //---Sprint 6 -->
-const modals = document.querySelectorAll(".modal");
+const modals = document.querySelector(".modal");
 //---^Sprint 6^ -->
 
 /* Functions*/
-//---Sprint 5 & 6 -->
 
-//---^Sprint 6^ -->
-
-/* ???? function getCardView(cardData) {
-  const card = new Card(cardData, cardSelector);
-  return card.getView();}*/
+function getCardView(cardData) {
+  const card = new Card(cardData, cardSelector, handleImageClick);
+  return card.getView();
+}
 
 function renderCard(cardElement, container) {
   container.prepend(cardElement);
@@ -98,7 +96,7 @@ function deleteCard(e) {
   e.target.closest(".card").remove();
 }
 
-function getCardView(cardData) {
+/*function getCardView(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageElement = cardElement.querySelector(".card__image");
   const cardTitleElement = cardElement.querySelector(".card__title");
@@ -119,11 +117,11 @@ function getCardView(cardData) {
   cardImageElement.alt = cardData.name;
   cardTitleElement.textContent = cardData.name;
   return cardElement;
-}
-//---^Sprint 5^ -->
+}*/
+
+//---^Elements^-->
 
 /* Event Handler */
-//---Sprint 5 -->
 function handleProfileEditSubmit(e) {
   e.preventDefault();
   profileTitle.textContent = profileTitleInput.value;
@@ -143,7 +141,7 @@ function deleteCardIcon(e) {
   e.target.closest(".card").remove();
 }
 
-// Validation//
+// *Validation*//
 const validationSettings = {
   inputSelector: ".modal__form-input",
   submitButtonSelector: ".modal__button",
@@ -152,44 +150,17 @@ const validationSettings = {
   errorClass: "modal__error_visible",
 };
 
-/*const editFormValidator = new FormValidator(
+const editFormValidator = new FormValidator(
   validationSettings,
   document.querySelector("#profile-modal-form")
 );
 editFormValidator.enableValidation();
-
-
-
-/*const addFormValidator = new FormValidator(
-  validationSettings,
-  document.querySelector("#modal-card-add-form")
-);
-addFormValidator.enableValidation();
-
-/*????const editFormValidator = new FormValidator(options, document.querySelector("#profile-modal-form"));
-editFormValidator.enableValidation();
-
-const addFormValidator = new FormValidator(options, document.querySelector("#modal-card-add-form"));
-addFormValidator.enableValidation(); */
-
-/*const editFormValidator = new FormValidator(
-  options,
-  document.querySelector("#profile-modal-form")
-);
-editFormValidator.enableValidation();
-
-/*validationSettings,
-  profileModalForm
-);
 
 const addFormValidator = new FormValidator(
-  options,
-  document.querySelector("#modal-add-card-form")
+  validationSettings,
+  document.querySelector("#card-add-modal")
 );
 addFormValidator.enableValidation();
-/*validationSettings,
-  modalAddCardForm
-);*/
 
 function handleCardImageModal(cardData) {
   modalCardPicture.src = cardData.link;
@@ -199,17 +170,15 @@ function handleCardImageModal(cardData) {
 }
 //---^Sprint 5^ -->
 /* Event Listener */
-//---Sprint 6 -->
-//---^Sprint 6^-->
 profileEditButton.addEventListener("click", () => {
   profileTitleInput.value = profileTitle.textContent;
   profileDescriptionInput.value = profileDescription.textContent;
-  editFormValidator.resetValidation();
+  editFormValidator.enableValidation();
   openPopUp(profileEditModal);
 });
 
 addNewCardButton.addEventListener("click", () => {
-  addFormValidator.resetValidation();
+  addFormValidator.enableValidation();
   openPopUp(addNewCardModal);
 });
 
@@ -242,8 +211,4 @@ initialCards.forEach((cardData) => {
   renderCard(cardView, cardListElement);
 });
 
-//---Sprint 7 -->
-/* ---------------------------- FormValidator.js ---------------------------- */
-
 export { openPopUp };
-//---^Sprint 7^ -->

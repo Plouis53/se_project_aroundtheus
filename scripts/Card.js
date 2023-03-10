@@ -35,20 +35,20 @@ export default class Card {
 
   _handleLikeIcon = () => {
     this._element
-      .querySelectorAll(this._cardLikeButton)
+      .querySelector(this._cardLikeButton)
       .classList.toggle("card__like-button_active");
   };
 
   _getTemplate() {
     const cardElement = document
-      .querySelectorAll(this._cardSelector)
+      .querySelector(this._cardSelector)
       .content.querySelector(".card")
       .cloneNode(true);
 
     return cardElement;
   }
 
-  renderCard() {
+  getView() {
     this._element = this._getTemplate();
     this._cardLikeButton = this._element.querySelector(".card__like-button");
     this._cardImage = this._element.querySelector(".card__image");
