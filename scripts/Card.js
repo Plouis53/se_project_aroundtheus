@@ -1,15 +1,10 @@
-import {
-  openPopUp,
-  modalCardPicture,
-  modalCaption,
-  cardImageModal,
-} from "./utils.js";
+import { openPopUp, modalCardPicture, modalCaption } from "./utils.js";
 export default class Card {
-  constructor(cardData, cardSelector) {
-    this._name = cardData.name;
-    this._link = cardData.link;
+  constructor(data, cardSelector) {
+    this._name = data.name;
+    this._link = data.link;
 
-    this._cardData = cardData;
+    this.data = data;
     this._cardSelector = cardSelector;
   }
 
@@ -26,13 +21,10 @@ export default class Card {
   }
 
   _handleCardImageModal = () => {
-    const addCardTitle = document.querySelector("#card-title");
-    const cardImage = document.querySelector("#modal-card-image");
-
-    modalCardPicture.src = this._link;
+    modalCardPicture.querySelector(".modal__image-card").src = this._link;
     modalCardPicture.alt = this._name;
     modalCaption.textContent = this._name;
-    openPopUp(cardImageModal);
+    openPopUp(modalCardPicture);
   };
 
   _handleDeleteCard = () => {
