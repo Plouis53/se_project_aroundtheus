@@ -1,4 +1,9 @@
-import { openPopUp, modalCardPicture } from "./utils.js";
+import {
+  openPopUp,
+  modalCardPicture,
+  modalCaption,
+  cardImageModal,
+} from "./utils.js";
 export default class Card {
   constructor(cardData, cardSelector) {
     this._name = cardData.name;

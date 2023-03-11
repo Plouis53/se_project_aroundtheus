@@ -1,4 +1,4 @@
-export const modalCardPicture = document.querySelector("#card-modal-image");
+export const modalCardPicture = document.querySelector("#card-image-modal");
 export const modalCaption = document.querySelector("#modal-card-caption");
 export const cardImageModal = document.querySelector("#card-image-modal");
 
