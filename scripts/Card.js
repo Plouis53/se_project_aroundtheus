@@ -2,7 +2,7 @@ import { openPopUp } from "./utils.js";
 export default class Card {
   constructor(data, cardSelector, handleImageClick) {
     this._name = data.name;
-    this._link = data.name;
+    this._link = data.link;
     this._handleImageClick = handleImageClick;
 
     this._cardSelector = cardSelector;
