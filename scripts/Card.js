@@ -1,25 +1,26 @@
 import { openPopUp } from "./utils.js";
 export default class Card {
-  constructor(data, cardSelector, handleImageClick) {
-    this._name = data.name;
-    this._link = data.link;
-    this._handleImageClick = handleImageClick;
+  constructor(cardData, cardSelector) {
+    this._name = cardData.name;
+    this._link = cardData.link;
 
+    this._cardData = cardData;
     this._cardSelector = cardSelector;
   }
 
   _setEventListeners() {
-    this._element.addEventListener("click", this._handleLikeIcon);
-    this._element.addEventListener("click", this._handleDeleteCard);
-    this._element.addEventListener("click", this._handleCardImageModal);
+    this._element
+      .querySelector(".card__like-button")
+      .addEventListener("click", () => this._handleLikeIcon());
+    this._element
+      .querySelector(".card__delete-button")
+      .addEventListener("click", () => this._handleDeleteCard());
+    this._element
+      .querySelector(".card__image")
+      .addEventListener("click", () => this._handleCardImageModal());
   }
 
-  _handleCardImageModal = (
-    cardData,
-    cardImageModal,
-    modalCardPicture,
-    modalCaption
-  ) => {
+  _handleCardImageModal = () => {
     const addCardTitle = document.querySelector("#card-title");
     const cardImage = document.querySelector("#modal-card-image");
 
@@ -35,9 +36,14 @@ export default class Card {
 
   _handleLikeIcon = () => {
     this._element
+      .querySelector(".card__like-button")
+      .classList.toggle(".card__like-button_active");
+  };
+
+  /*this._element
       .querySelector(this._cardLikeButton)
       .classList.toggle("card__like-button_active");
-  };
+  };*/
 
   _getTemplate() {
     const cardElement = document

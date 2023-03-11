@@ -63,9 +63,8 @@ const cardTemplate =
 
 const cardAddForm = addNewCardModal.querySelector("#modal-add-card-form");
 
-const modalCaption = document.querySelector("#modal-card-caption");
 const cardImageModal = document.querySelector("#card-image-modal");
-const modalCardPicture = cardImageModal.querySelector("#modal-card-image");
+const modalCardPicture = document.querySelector("#card-image");
 const cardImageModalCloseButton = document.querySelector("#card-close-image");
 //---^Sprint 5^ -->
 

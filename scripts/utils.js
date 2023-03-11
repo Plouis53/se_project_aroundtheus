@@ -1,3 +1,7 @@
+export const modalCardPicture = document.querySelector("#card-modal-image");
+export const modalCaption = document.querySelector("#modal-card-caption");
+export const cardImageModal = document.querySelector("#card-image-modal");
+
 export function closeModalByEscape(e) {
   if (e.key === "Escape") {
     const modalOpened = document.querySelector(".modal_opened");
