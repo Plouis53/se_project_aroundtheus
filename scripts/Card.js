@@ -1,4 +1,4 @@
-import { openPopUp } from "./utils.js";
+import { openPopUp, modalCardPicture } from "./utils.js";
 export default class Card {
   constructor(cardData, cardSelector) {
     this._name = cardData.name;
@@ -39,11 +39,6 @@ export default class Card {
       .querySelector(".card__like-button")
       .classList.toggle(".card__like-button_active");
   };
-
-  /*this._element
-      .querySelector(this._cardLikeButton)
-      .classList.toggle("card__like-button_active");
-  };*/
 
   _getTemplate() {
     const cardElement = document
