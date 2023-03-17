@@ -1,5 +1,3 @@
-# Project 3: Around The U.S.
-
 By Phillippe Louis
 
 Overview
@@ -7,7 +5,7 @@ Overview
 - Intro
 - Figma
 - Images
--GitHub
+  -GitHub
 
 Project Description and Tech Functionality
 
@@ -29,8 +27,6 @@ GitHub
 Project Screenshot:
 
 ![Screenshot 2023-01-16 at 9 46 11 PM](https://user-images.githubusercontent.com/117612222/212801482-49e6f755-cb12-420a-9a3f-b95ed521b2af.png)
-
-
 
 GitHub Pages
 https://plouis53.github.io/se_project_aroundtheus/
