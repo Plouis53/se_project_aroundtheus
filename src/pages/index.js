@@ -2,7 +2,7 @@ import FormValidator from "../components/FormValidator";
 import Card from "../components/Card";
 import PopupWithForms from "../components/PopupWithForms";
 import Section from "../components/Section.js";
-import PopupWithImages from "../components/PopupWithImages";
+import PopupImage from "../components/PopupWithImages";
 import UserInfo from "../components/UserInfo.js";
 
 import "./index.css";
@@ -71,7 +71,7 @@ const editFormPopup = new PopupWithForms(
   submitEditProfile
 );
 const addFormPopup = new PopupWithForms("#card-add-modal", submitAddCard);
-const imagePopup = new PopupWithImages("#card-image-modal", handleImageClick);
+const imagePopup = new PopupImage("#card-image-modal", handleImageClick);
 
 const section = new Section(
   {
