@@ -1,11 +1,13 @@
 import { openPopUp, modalCardPicture, modalCaption } from "./utils.js";
-export default class Card {
-  constructor(data, cardSelector) {
+class Card {
+  constructor(data, cardSelector, cardTemplate, handleCardImageModal) {
     this._name = data.name;
     this._link = data.link;
 
     this.data = data;
     this._cardSelector = cardSelector;
+    this._cardTemplate = cardTemplate;
+    this.__handleCardImageModal = handleCardImageModal;
   }
 
   _setEventListeners() {
@@ -26,6 +28,10 @@ export default class Card {
     modalCaption.textContent = this._name;
     openPopUp(modalCardPicture);
   };
+
+  /*_openImageModal() {
+    this._handleCardImageModal(this._name, this._link);
+  }*/
 
   _handleDeleteCard = () => {
     this._element.remove();
@@ -64,3 +70,5 @@ export default class Card {
     return this._element;
   }
 }
+
+export default Card;
