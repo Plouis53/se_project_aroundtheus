@@ -7,13 +7,13 @@ import UserInfo from "../components/UserInfo.js";
 
 import "./index.css";
 
+import "..";
+
 import {
   initialCards,
   validationSettings,
   profileEditModal,
   addNewCardModal,
-  profileEditForm,
-  cardAddForm,
   profileEditButton,
   addNewCardButton,
   profileTitle,
@@ -24,35 +24,6 @@ import {
   cardImageInput,
   cardListElement,
 } from "../utils/constants.js";
-
-/*import { openPopUp, closePopUp } from "./utils.js";
-
-const initialCards = [
-  {
-    name: "Yosemite Valley",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg",
-  },
-  {
-    name: "Lake Louise",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lake-louise.jpg",
-  },
-  {
-    name: "Bald Mountains",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/bald-mountains.jpg",
-  },
-  {
-    name: "Latemar",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/latemar.jpg",
-  },
-  {
-    name: "Vanoise National Park",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/vanoise.jpg",
-  },
-  {
-    name: "Lago di Braies",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
-  },
-];*/
 
 /*--------------------------Class Constants-----------------------------*/
 
@@ -65,7 +36,7 @@ const editFormValidation = new FormValidator(
   validationSettings,
   profileEditModal
 );
-const addFormValidation = new FormValidator(validationSettings, addCardModal);
+const addFormValidation = new FormValidator(validationSettings, addNewCardModal);
 const editFormPopup = new PopupWithForms(
   "#profile-modal-form",
   submitEditProfile

@@ -45,10 +45,16 @@ export const profileTitle = document.querySelector(".profile__title");
 export const profileDescription = document.querySelector(
   ".profile__description"
 );
-export const profileTitleInput = document.querySelector("#profile-title-input");
-export const profileDescriptionInput = document.querySelector(
+export const profileTitleInput = profileEditForm.querySelector(
+  "#profile-title-input"
+);
+export const profileDescriptionInput = profileEditForm.querySelector(
   "#profile-description-input"
 );
-export const cardTitleInput = document.querySelector("#modal-card-title-input");
-export const cardImageInput = document.querySelector("#modal-card-image-input");
+export const cardTitleInput = cardAddForm.querySelector(
+  "#modal-card-title-input"
+);
+export const cardImageInput = cardAddForm.querySelector(
+  "#modal-card-image-input"
+);
 export const cardListElement = document.querySelector(".cards__list");
