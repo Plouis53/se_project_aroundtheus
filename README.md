@@ -1,3 +1,5 @@
+# Project 3: Around The U.S.
+
 By Phillippe Louis
 
 Overview

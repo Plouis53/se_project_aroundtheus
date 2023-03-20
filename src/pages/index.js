@@ -70,13 +70,13 @@ const editFormPopup = new PopupWithForms(
   "#profile-modal-form",
   submitEditProfile
 );
-const addFormPopup = new PopupWithForms("#card-add-modal", submitAddCard);
-const imagePopup = new PopupImage("#card-image-modal", handleImageClick);
+const addFormPopup = new PopupWithForms("#card-add-modal");
+const imagePopup = new PopupImage("#card-image-modal");
 
-const section = new Section(
+const sectionElement = new Section(
   {
     items: initialCards,
-    renderer: renderCard,
+    renderer: getView,
   },
   cardListElement
 );
@@ -89,24 +89,24 @@ editFormPopup.setEventListeners();
 addFormPopup.setEventListeners();
 imagePopup.setEventListeners();
 
-section.renderItems();
+sectionElement.renderItems();
 
 /*--------------------------Event Listeners-------------------------*/
 profileEditButton.addEventListener("click", () => {
-  openPopUp(profileEditModal);
+  openProfileEditForm();
 });
 
 addNewCardButton.addEventListener("click", () => {
   addFormValidation.enableValidation();
-  addFormPopup(addNewCardModal);
+  addFormPopup.open(addNewCardModal);
 });
 
 /*--------------------------Functions------------------------------*/
 
 function openProfileEditForm() {
   const profileInfo = UserInfo.getUserInfo();
-  profileTitleInput.value = profileInfo.name;
-  profileDescriptionInput.value = profileInfo.job;
+  profileTitleInput.value = profileInfo.nameElement;
+  profileDescriptionInput.value = profileInfo.descriptionElement;
   editFormValidation.enableValidation();
   editFormPopup.open();
 }
@@ -114,22 +114,18 @@ function openProfileEditForm() {
 function submitEditProfile(inputValues) {
   console.log(inputValues);
   UserInfo.setUserInfo({
-    name: inputValues.title,
-    job: inputValues.description,
+    nameElement: inputValues.name,
+    descriptionElement: inputValues.description,
   });
 }
 
 function submitAddCard(inputValues) {
-  renderCard({ name: inputValues.place, link: inputValues.url });
+  getView({ name: inputValues.place, link: inputValues.url });
 }
 
-function renderCard(cardData) {
-  const card = new Card(
-    cardData,
-    "#card-template",
-    handleImageClick
-  ).renderCard();
-  section.addItem(card);
+function getView(cardData) {
+  const card = new Card(cardData, "#card-template", handleImageClick).getView();
+  sectionElement.addItem(card);
 }
 
 function handleImageClick(name, link) {
@@ -263,7 +259,7 @@ const validationSettings = {
   errorClass: "modal__error_visible",
 };
 
-/* --------------------------------- Section.js -------------------------------- */
+/* --------------------------------- Section.js -------------------------------- 
 const sectionElement = new Section(
   {
     items: initialCards,

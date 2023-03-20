@@ -1,4 +1,5 @@
 export const validationSettings = {
+  formSelector: ".modal__form",
   inputSelector: ".modal__form-input",
   submitButtonSelector: ".modal__form-button",
   inactiveButtonClass: "modal__form-button_inactive",
@@ -36,9 +37,7 @@ export const initialCards = [
 export const profileEditModal = document.querySelector("#profile-edit-modal");
 export const addNewCardModal = document.querySelector("#card-add-modal");
 export const profileEditForm = profileEditModal.querySelector(".modal__form");
-export const cardAddForm = addNewCardModal.querySelector(
-  "#modal-add-card-form"
-);
+export const cardAddForm = addNewCardModal.querySelector(".modal__form");
 
 export const profileEditButton = document.querySelector("#profile-edit-button");
 export const addNewCardButton = document.querySelector("#profile-add-button");
