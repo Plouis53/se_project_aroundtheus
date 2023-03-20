@@ -1,4 +1,3 @@
-import { openPopUp, modalCardPicture, modalCaption } from "./utils.js";
 class Card {
   constructor(data, cardSelector, cardTemplate, handleCardImageModal) {
     this._name = data.name;
