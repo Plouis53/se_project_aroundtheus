@@ -10,7 +10,7 @@ class FormValidator {
 
   // *_setEventListeners in the class*//
   _setEventListeners() {
-    this._inputElements = [...this._form.querySelectorAll(this._inputSelector)];
+    this._inputList = [...this._form.querySelectorAll(this._inputSelector)];
     this._submitButton = this._form.querySelector(this._submitButtonSelector);
 
     this._form.addEventListener("reset", () => {
@@ -20,7 +20,7 @@ class FormValidator {
     });
 
     this._toggleButtonState();
-    this._inputElements.forEach((inputElement) => {
+    this._inputList.forEach((inputElement) => {
       inputElement.addEventListener("input", () => {
         this._checkInputValidity(inputElement);
         this._toggleButtonState();
@@ -41,7 +41,7 @@ class FormValidator {
   }
 
   _hasInvalidInput() {
-    return !this._inputElements.every((input) => input.validity.valid);
+    return !this._inputList.every((input) => input.validity.valid);
   }
 
   _checkInputValidity(inputElement) {
@@ -52,7 +52,7 @@ class FormValidator {
     }
   }
 
-  _showInputError(inputElement, validationMessage) {
+  _showInputError(inputElement) {
     const errorMessageElements = this._form.querySelector(
       `#${inputElement.id}-error`
     );
