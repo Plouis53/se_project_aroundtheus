@@ -1,4 +1,7 @@
 class Card {
+  getView() {
+    throw new Error("Method not implemented.");
+  }
   constructor(data, cardSelector, handleImageClick) {
     this._name = data.name;
     this._link = data.link;
