@@ -32,5 +32,4 @@ Project Screenshot:
 
 GitHub Pages
 https://plouis53.github.io/se_project_aroundtheus/
-file:///Users/philipper.louis/Documents/GitHub/se_project_aroundtheus/src/index.html
 
