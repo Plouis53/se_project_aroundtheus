@@ -9,6 +9,12 @@ class PopupWithForms extends Popup {
     this._formInputs = this._popup.querySelectorAll(".modal__form-input");
   }
 
+  _handleSubmit = (e) => {
+    e.preventDefault();
+    this._handleFormSubmit(this._getInputValues());
+    this.close();
+  };
+
   close() {
     this._popupForm.reset();
     super.close();
@@ -26,12 +32,12 @@ class PopupWithForms extends Popup {
   setEventListeners() {
     super.setEventListeners();
 
-    this._popupForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const inputValues = this._getInputValues();
-      this._handleFormSubmit(inputValues);
-      this.close();
-    });
+    this._popupForm.addEventListener("submit", this._handleSubmit);
+  }
+
+  removeEventListeners() {
+    super.removeEventListeners();
+    this._popupForm.removeEventListener("submit", this._handleSubmit);
   }
 }
 

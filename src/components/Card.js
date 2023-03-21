@@ -1,46 +1,11 @@
 class Card {
-  constructor(data, cardSelector, cardTemplate, handleCardImageModal) {
+  constructor(data, cardSelector, handleImageClick) {
     this._name = data.name;
     this._link = data.link;
 
-    this.data = data;
     this._cardSelector = cardSelector;
-    this._cardTemplate = cardTemplate;
-    this.__handleCardImageModal = handleCardImageModal;
+    this._handleImageClick = handleImageClick;
   }
-
-  _setEventListeners() {
-    this._element
-      .querySelector(".card__like-button")
-      .addEventListener("click", () => this._handleLikeIcon());
-    this._element
-      .querySelector(".card__delete-button")
-      .addEventListener("click", () => this._handleDeleteCard());
-    this._element
-      .querySelector(".card__image")
-      .addEventListener("click", () => this._handleCardImageModal());
-  }
-
-  _handleCardImageModal = () => {
-    modalCardPicture.querySelector(".modal__image-card").src = this._link;
-    modalCardPicture.alt = this._name;
-    modalCaption.textContent = this._name;
-    openPopUp(modalCardPicture);
-  };
-
-  /*_openImageModal() {
-    this._handleCardImageModal(this._name, this._link);
-  }*/
-
-  _handleDeleteCard = () => {
-    this._element.remove();
-  };
-
-  _handleLikeIcon = () => {
-    this._element
-      .querySelector(".card__like-button")
-      .classList.toggle("card__like-button_active");
-  };
 
   _getTemplate() {
     const cardElement = document
@@ -51,9 +16,31 @@ class Card {
     return cardElement;
   }
 
+  _setEventListeners() {
+    this._LikeButton.addEventListener("click", () => this._handleLikeIcon());
+    this._cardDeleteButton.addEventListener("click", () =>
+      this._handleDeleteCard()
+    );
+    this._cardImage.addEventListener("click", () => this._handlePreview());
+  }
+
+  _handleDeleteCard = () => {
+    this._element.remove();
+  };
+
+  _handleLikeIcon = () => {
+    this._LikeButton
+      .querySelector(".card__like-button")
+      .classList.toggle("card__like-button_active");
+  };
+
+  _handlePreview() {
+    this._handleImageClick(this._name, this._link);
+
+  
   getView() {
     this._element = this._getTemplate();
-    this._cardLikeButton = this._element.querySelector(".card__like-button");
+    this._LikeButton = this._element.querySelector(".card__like-button");
     this._cardImage = this._element.querySelector(".card__image");
     this._addCardTitle = this._element.querySelector(".card__title");
     this._cardDeleteButton = this._element.querySelector(
@@ -70,4 +57,7 @@ class Card {
   }
 }
 
-export default Card;
+}
+
+  export default Card;
+
