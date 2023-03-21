@@ -7,8 +7,6 @@ import UserInfo from "../components/UserInfo.js";
 
 import "./index.css";
 
-import "..";
-
 import {
   initialCards,
   validationSettings,
@@ -36,10 +34,7 @@ const editFormValidator = new FormValidator(
   validationSettings,
   profileEditModal
 );
-const addFormValidator = new FormValidator(
-  validationSettings,
-  addNewCardModal
-);
+const addFormValidator = new FormValidator(validationSettings, addNewCardModal);
 const editFormPopup = new PopupWithForms(
   "#profile-modal-form",
   submitEditProfile
@@ -160,7 +155,6 @@ function getView(cardData) {
   sectionElement.addItem(card);
 }
 
-/
 const cardImageModal = document.querySelector("#card-image-modal");
 const modalCardPicture = document.querySelector("#card-image");
 const cardImageModalCloseButton = document.querySelector("#card-close-image");
@@ -177,5 +171,3 @@ function getCardView(cardData) {
 function renderCard(cardElement, container) {
   container.prepend(cardElement);
 }
-
-
