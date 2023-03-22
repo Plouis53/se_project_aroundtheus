@@ -41,7 +41,7 @@ class Card {
     this._handleImageClick(this._name, this._link);
 
   
-  getView() {
+  renderCard() {
     this._element = this._getTemplate();
     this._LikeButton = this._element.querySelector(".card__like-button");
     this._cardImage = this._element.querySelector(".card__image");
