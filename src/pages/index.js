@@ -17,6 +17,7 @@ import {
   profileTitle,
   profileDescription,
   profileTitleInput,
+  profileEditForm,
   profileDescriptionInput,
   cardTitleInput,
   cardImageInput,
@@ -51,8 +52,8 @@ const sectionElement = new Section(
 );
 
 /*--------------------------------------------------------------------------*/
-editFormValidation.enableValidation();
-addFormValidation.enableValidation();
+editFormValidator.enableValidation();
+addFormValidator.enableValidation();
 
 editFormPopup.setEventListeners();
 addFormPopup.setEventListeners();
@@ -134,7 +135,7 @@ function openProfileEditForm() {
   const profileInfo = UserInfo.getUserInfo();
   profileTitleInput.value = profileInfo.nameElement;
   profileDescriptionInput.value = profileInfo.descriptionElement;
-  editFormValidation.enableValidation();
+  editFormValidator.enableValidation();
   editFormPopup.open();
 }
 
