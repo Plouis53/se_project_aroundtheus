@@ -15,7 +15,7 @@
       "type": "chrome",
       "request": "launch",
       "name": "Launch Chrome against localhost",
-      "url": "https://plouis53.github.io/se_project_aroundtheus/",
+      "url": "https://plouis53.github.io/se_project_aroundtheus/src/index",
       "webRoot": "${workspaceFolder}"
     }
   ]
