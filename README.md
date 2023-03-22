@@ -1,5 +1,3 @@
-# Project 3: Around The U.S.
-
 By Phillippe Louis
 
 Overview
@@ -32,4 +30,3 @@ Project Screenshot:
 
 GitHub Pages
 https://plouis53.github.io/se_project_aroundtheus/
-
