@@ -1,7 +1,5 @@
 class Card {
-  getView() {
- 
-  }
+  getView() {}
   constructor(data, cardSelector, handleImageClick) {
     this._name = data.name;
     this._link = data.link;
@@ -39,8 +37,8 @@ class Card {
 
   _handlePreview() {
     this._handleImageClick(this._name, this._link);
+  }
 
-  
   renderCard() {
     this._element = this._getTemplate();
     this._LikeButton = this._element.querySelector(".card__like-button");
@@ -60,7 +58,4 @@ class Card {
   }
 }
 
-}
-
-  export default Card;
-
+export default Card;
