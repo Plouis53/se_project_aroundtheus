@@ -1,5 +1,5 @@
 {
-  "name": "practicum",
+  "name": "se_project_aroundtheus",
   "version": "0.0.1",
   "description": "Educational platform",
   "main": "index.js",
@@ -21,11 +21,16 @@
     "html-webpack-plugin": "5.5.0",
     "mini-css-extract-plugin": "2.6.1",
     "postcss-loader": "7.0.1",
-    "webpack": "5.76.0",
+    "webpack": "5.73.0",
     "webpack-cli": "4.10.0",
     "webpack-dev-server": "4.9.3"
   },
   "dependencies": {
-    "core-js": "3.23.5"
+    "core-js": "3.23.5",
+    "package-name": "0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "description"
   }
 }
