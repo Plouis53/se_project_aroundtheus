@@ -160,7 +160,6 @@ function getView(cardData) {
   sectionElement.addItem(card);
 }
 
-/
 const cardImageModal = document.querySelector("#card-image-modal");
 const modalCardPicture = document.querySelector("#card-image");
 const cardImageModalCloseButton = document.querySelector("#card-close-image");
