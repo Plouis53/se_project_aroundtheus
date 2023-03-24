@@ -5,9 +5,7 @@ import Section from "../components/Section.js";
 import PopupImage from "../components/PopupWithImages";
 import UserInfo from "../components/UserInfo.js";
 
-import "./index.css";
-
-import "..";
+import "../pages/index.css";
 
 import {
   initialCards,
@@ -36,10 +34,7 @@ const editFormValidator = new FormValidator(
   validationSettings,
   profileEditModal
 );
-const addFormValidator = new FormValidator(
-  validationSettings,
-  addNewCardModal
-);
+const addFormValidator = new FormValidator(validationSettings, addNewCardModal);
 const editFormPopup = new PopupWithForms(
   "#profile-modal-form",
   submitEditProfile
@@ -176,5 +171,3 @@ function getCardView(cardData) {
 function renderCard(cardElement, container) {
   container.prepend(cardElement);
 }
-
-
