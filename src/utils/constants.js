@@ -1,12 +1,3 @@
-export const validationSettings = {
-  formSelector: ".modal__form",
-  inputSelector: ".modal__form-input",
-  submitButtonSelector: ".modal__form-button",
-  inactiveButtonClass: "modal__form-button_inactive",
-  inputErrorClass: "modal__form-input_error",
-  errorClass: "modal__error_visible",
-};
-
 export const initialCards = [
   {
     name: "Yosemite Valley",
@@ -35,20 +26,25 @@ export const initialCards = [
 ];
 
 export const profileEditModal = document.querySelector("#profile-edit-modal");
-export const addNewCardModal = document.querySelector("#card-add-modal");
-export const profileEditForm = document.querySelector("modal__form");
-export const cardAddForm = document.querySelector("modal__form");
-
 export const profileEditButton = document.querySelector("#profile-edit-button");
-export const addNewCardButton = document.querySelector("#profile-add-button");
-export const profileTitle = document.querySelector(".profile__title");
+export const profileCloseButton = document.querySelector("#card-close-button");
+export const profileTitle = document.querySelector("#profile-title-input");
 export const profileDescription = document.querySelector(
-  ".profile__description"
+  "profile-description-input"
 );
-export const profileTitleInput = document.querySelector("#profile-title-input");
-export const profileDescriptionInput = document.querySelector(
-  "#profile-description-input"
+export const profileEditForm = profileEditModal.querySelector(
+  "#profile-modal-form"
 );
-export const cardTitleInput = document.querySelector("#modal-card-title-input");
-export const cardImageInput = document.querySelector("#modal-card-image-input");
+
+export const addNewCardModal = document.querySelector("#card-add-modal");
+export const addNewCardButton = document.querySelector("#profile-add-button");
+export const cardCloseButton =
+  addNewCardModal.querySelector("#card-close-button");
+
 export const cardListElement = document.querySelector(".cards__list");
+export const cardAddForm = document.querySelector("#modal-add-card-form");
+export const cardImageModal = document.querySelector("#card-image-modal");
+export const cardImageModalClose = document.querySelector("#card-close-image");
+export const modals = document.querySelectorAll(".modal");
+
+export const cardSelector = "#card-template";
