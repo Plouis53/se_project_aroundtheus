@@ -1,3 +1,5 @@
+import { cardImageModal } from "../utils/constants";
+
 class Card {
   constructor(cardData, cardSelector, handleImageClick) {
     this._name = cardData.name;
@@ -9,7 +11,7 @@ class Card {
   }
 
   _setEventListeners() {
-    console.log(this._element);
+    console.log();
     this._element
       .querySelector(".card__like-button")
       .addEventListener("click", () => this._handleLikeButton());
