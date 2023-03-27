@@ -60,6 +60,3 @@ class Card {
 }
 
 export default Card;
-
-
-npm run dev
