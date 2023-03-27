@@ -28,13 +28,15 @@ export const initialCards = [
 export const profileEditModal = document.querySelector("#profile-edit-modal");
 export const profileEditButton = document.querySelector("#profile-edit-button");
 export const profileCloseButton = document.querySelector("#card-close-button");
-export const profileTitle = document.querySelector("#profile-title-input");
-export const profileDescription = document.querySelector(
+export const profileTitleInput = document.querySelector("#profile-title-input");
+export const profileDescriptionInput = document.querySelector(
   "profile-description-input"
 );
-export const profileEditForm = profileEditModal.querySelector(
+export const profileEditForm = document.querySelector("#profile-modal-form");
+
+/*export const profileEditForm = profileEditModal.querySelector(
   "#profile-modal-form"
-);
+);*/
 
 export const addNewCardModal = document.querySelector("#card-add-modal");
 export const addNewCardButton = document.querySelector("#profile-add-button");

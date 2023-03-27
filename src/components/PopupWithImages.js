@@ -1,6 +1,6 @@
 import Popup from "./Popup";
 
-class PopupImage extends Popup {
+class PopupWithImage extends Popup {
   constructor(popupSelector) {
     super({ popupSelector });
     this._popupImage = this._popupElement.querySelector("#modal-card-image");
@@ -17,4 +17,4 @@ class PopupImage extends Popup {
   }
 }
 
-export default PopupImage;
+export default PopupWithImage;
