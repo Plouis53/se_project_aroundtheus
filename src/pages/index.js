@@ -70,6 +70,7 @@ section.renderItems();
 
 /*----Functions----*/
 function renderCard(cardData) {
+  console.log
   const card = new Card(
     {
       cardData,
@@ -81,6 +82,14 @@ function renderCard(cardData) {
         imagePopup.open(image.name, image.link);
       },
     },
+    // cardData,
+    // (cardData) => {
+    //       const image = {
+    //         name: cardData.name,
+    //         link: cardData.src,
+    //       }
+    //       imagePopup.open(image.name, image.link);
+    //     },
     cardSelector
   ).renderCard();
   section.addItem(card);
