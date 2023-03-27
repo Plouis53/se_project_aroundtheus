@@ -9,11 +9,12 @@ class Card {
   }
 
   _setEventListeners() {
+    console.log(this._element);
     this._element
       .querySelector(".card__like-button")
       .addEventListener("click", () => this._handleLikeButton());
     this._element
-      .querySelector("#card-delete-button")
+      .querySelector(".card__delete-button")
       .addEventListener("click", () => this._handleDeleteButton());
     this._element
       .querySelector(".card__image")

@@ -50,7 +50,7 @@ addFormValidator.enableValidation();
 
 /*----Class Constants----*/
 const editFormPopup = new PopupWithForms(
-  "#profile-modal-forml",
+  "#profile-edit-modal",
   handleProfileFormSubmit
 );
 editFormPopup.setEventListeners();
