@@ -30,7 +30,7 @@ export const profileEditButton = document.querySelector("#profile-edit-button");
 export const profileCloseButton = document.querySelector("#card-close-button");
 export const profileTitleInput = document.querySelector("#profile-title-input");
 export const profileDescriptionInput = document.querySelector(
-  "profile-description-input"
+  "#profile-description-input"
 );
 export const profileEditForm = document.querySelector("#profile-modal-form");
 
