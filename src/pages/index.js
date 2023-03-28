@@ -70,7 +70,7 @@ section.renderItems();
 
 /*----Functions----*/
 function renderCard(cardData) {
-  console.log
+  console.log;
   const card = new Card(
     {
       cardData,
@@ -82,14 +82,6 @@ function renderCard(cardData) {
         imagePopup.open(image.name, image.link);
       },
     },
-    // cardData,
-    // (cardData) => {
-    //       const image = {
-    //         name: cardData.name,
-    //         link: cardData.src,
-    //       }
-    //       imagePopup.open(image.name, image.link);
-    //     },
     cardSelector
   ).renderCard();
   section.addItem(card);
@@ -114,7 +106,7 @@ function handleAddFormSubmit(inputValues) {
   addFormPopup.close();
 }
 
-const setUserForm = ({ name, description }) => {
+const setUserForm = ({ name , description}) => {
   profileTitleInput.value = name;
   profileDescriptionInput.value = description;
 };
