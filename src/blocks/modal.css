@@ -104,13 +104,13 @@
   padding: 0;
 }
 
-.modal__form-button_inactive {
+.modal__button_inactive {
   border: solid 1px rgba(0, 0, 0, 0.2);
   background-color: transparent;
   color: rgba(0, 0, 0, 0.2);
 }
 
-.modal__form-button:hover {
+.modal__button:hover {
   opacity: 0.6;
   transition: 0.5s;
   cursor: pointer;
