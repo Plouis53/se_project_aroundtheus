@@ -98,6 +98,7 @@ function handleProfileFormSubmit(data) {
 }
 
 function handleAddFormSubmit(inputValues) {
+  console.log(inputValues)
   const card = {
     nameElement: inputValues.name,
     descriptionElement: inputValues.description,
