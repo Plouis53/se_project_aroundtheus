@@ -2,7 +2,7 @@ import FormValidator from "../components/FormValidator";
 import Card from "../components/Card";
 import PopupWithForm from "../components/PopupWithForms";
 import Section from "../components/Section.js";
-import PopupWithImage from "../components/PopupWithImages";
+import PopupWithImage from "../components/PopupWithImage";
 import UserInfo from "../components/UserInfo.js";
 
 import "./index.css";
