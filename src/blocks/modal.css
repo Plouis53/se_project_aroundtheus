@@ -29,7 +29,7 @@
 .modal__container {
   background-color: #fff;
   margin: auto;
-  padding: 34px;
+  /* padding: 34px; */
   border-radius: 10px;
   position: relative;
   width: 430px;
