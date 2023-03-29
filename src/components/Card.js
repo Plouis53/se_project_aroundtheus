@@ -1,7 +1,5 @@
-import { cardImageModal } from "../utils/constants";
-
 class Card {
-  constructor({cardData, handleImageClick}, cardSelector) {
+  constructor({ cardData, handleImageClick }, cardSelector) {
     this._name = cardData.name;
     this._link = cardData.link;
 
@@ -36,6 +34,7 @@ class Card {
 
   _handleDeleteButton() {
     this._element.remove();
+    this._element = null;
   }
 
   _getTemplate() {
