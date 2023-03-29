@@ -116,7 +116,7 @@
   cursor: pointer;
 }
 
-.modal__form-button_inactive:hover {
+.modal__button_inactive:hover {
   opacity: 1;
   cursor: default;
 }
