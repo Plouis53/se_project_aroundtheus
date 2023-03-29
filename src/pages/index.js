@@ -70,7 +70,6 @@ section.renderItems();
 
 /*----Functions----*/
 function renderCard(cardData) {
-  console.log;
   const card = new Card(
     {
       cardData,
@@ -98,7 +97,6 @@ function handleProfileFormSubmit(data) {
 }
 
 function handleAddFormSubmit(inputValues) {
-  console.log(inputValues);
   const card = {
     name: inputValues.title,
     link: inputValues.link,
@@ -107,14 +105,14 @@ function handleAddFormSubmit(inputValues) {
   addFormPopup.close();
 }
 
-const setUserForm = ({ name, description }) => {
+const fillUserForm = ({ name, description }) => {
   profileTitleInput.value = name;
   profileDescriptionInput.value = description;
 };
 
 profileEditButton.addEventListener("click", () => {
   const { name, description } = userInfo.getUserInfo();
-  setUserForm({ name, description });
+  fillUserForm({ name, description });
   editFormPopup.open();
   editFormValidator.resetValidation();
 });
