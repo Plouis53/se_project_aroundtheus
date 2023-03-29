@@ -1,8 +1,8 @@
 class Section {
-  constructor({ items, renderer }, cardsList) {
+  constructor({ items, renderer }, itemsList) {
     this._items = items;
     this._renderer = renderer;
-    this._cardsList = cardsList;
+    this._itemsList = itemsList;
   }
 
   renderItems() {
@@ -10,7 +10,7 @@ class Section {
   }
 
   addItem(item) {
-    this._cardsList.prepend(item);
+    this._itemsList.prepend(item);
   }
 }
 
