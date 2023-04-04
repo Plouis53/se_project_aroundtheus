@@ -1,5 +1,6 @@
-import FormValidator from "../components/FormValidator";
+import Api from "../utils/api",
 import Card from "../components/Card";
+import FormValidator from "../components/FormValidator";
 import PopupWithForm from "../components/PopupWithForm";
 import Section from "../components/Section.js";
 import PopupWithImage from "../components/PopupWithImage";
@@ -9,6 +10,7 @@ import "./index.css";
 
 
 import {
+  validatingSettings,
   initialCards,
   profileEditButton,
   profileTitleInput,
@@ -18,17 +20,60 @@ import {
   cardSelector,
 } from "../utils/constants.js";
 
-// import Api from "../utils/api.js"
-
-// fetch("https://around.nomoreparties.co/v1/group-12/cards", {
+// const api = new Api({
+//   baseUrl: "https://around.nomoreparties.co/v1/group-12/",
 //   headers: {
-//     authorization: "67d93972-468f-4c7a-bef5-b0ddeb015065"
+//     authorization: "67d93972-468f-4c7a-bef5-b0ddeb015065",
 //     "Content-Type": "application/json",
 //   }
 // })
-// .then(res => res.json())
-// .then((result) => {
-//   console.log(result);
+
+fetch("https://around.nomoreparties.co/v1/group-12/", {
+  headers: {
+    authorization: "67d93972-468f-4c7a-bef5-b0ddeb015065"
+  }
+})
+.then(res => res.json())
+.then((result) => {
+  console.log(result);
+}); 
+
+class Api {
+  constructor({ baseUrl, headers }) {
+    this._baseUrl = baseUrl;
+    this._headers = headers;
+  }
+}
+
+  getInitialCards() {
+    return fetch("https://around.nomoreparties.co/v1/group-12/cards", {
+      headers: {
+        authorization: "67d93972-468f-4c7a-bef5-b0ddeb015065"
+      }
+    })
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        }
+        // if the server returns an error, reject the promise
+        return Promise.reject(`Error: ${res.status}`);
+      });
+  }
+
+  api.getInitialCards()
+  .then((result) => {
+    // process the result
+  })
+  .catch((err) => {
+    console.error(err); // log the error to the console
+  });
+
+// const api = new Api({
+//   baseUrl: "https://around.nomoreparties.co/v1/group-12",
+//   headers: {
+//     authorization: "67d93972-468f-4c7a-bef5-b0ddeb015065",
+//     "Content-Type": "application/json"
+//   }
 // }); 
 
 

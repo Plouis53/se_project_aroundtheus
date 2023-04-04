@@ -157,94 +157,38 @@
     <!--Delete Confirmation-->
     <div class="modal" id="Delete-Confirm-modal">
       <div class="modal__delete_container" id="Delete-confirm-container">
-        <button class="modal__close" id="Delete-close-button"></button>
-        <form class="modal__form" id="Delete-modal-form">
-          <h2 class="modal__heading" id="Delete-modal-heading">
-            Are you Sure?
-          </h2>
-          <fieldset
-            class="modal__form-fieldset"
-            id="Delete-modal-form-fieldset"
-          >
-            <!-- <input
-              class="modal__form-input"
-              type="text"
-              name="title"
-              id="modal-card-title-input"
-              required
-              minlength="1"
-              maxlength="30"
-              placeholder="Title"
-            />
-            <span class="modal__error" id="modal-card-title-input-error">
-            </span>
-            <input
-              class="modal__form-input"
-              type="text"
-              id="modal-card-image-input"
-              name="link"
-              required
-              placeholder="Image link"
-            />
-            <span
-              class="modal__error modal__error_visible"
-              id="modal-card-image-input-error"
-            >
-            </span> -->
-            <button
-              class="modal__button"
-              type="submit"
-              id="Delete-modal-button"
-            >
-              Yes
-            </button>
-          </fieldset>
+        <button class="modal__close" id="Delete-confirm-close"></button>
+        <h2 class="modal__heading">Are you Sure?</h2>
+        <form class="modal__form" id="Delete-confirm-form" novalidate>
+          <button class="modal__button" id="Delete-confirm-button">Yes</button>
         </form>
       </div>
     </div>
     <!--^Delete Confirmation^-->
-    <!--Avatar Image Change-->
-    <div class="modal" id="Avatar-modal">
-      <div class="modal__container" id="Avatar-modal-container">
-        <button class="modal__close" id="Avatar-close-button"></button>
-        <form class="modal__form">
-          <h2 class="modal__heading" id="Avatar-modal-heading">Change profile picture</h2>
-          <fieldset class="modal__form-fieldset" id="Avatar-form-fieldset">
-            <input
-              class="modal__form-input"
-              type="text"
-              name="Avatar"
-              id="Avatar-form-link"
-              required
-              placeholder="Avatar-Image-link"
-            />
-            <span class="modal__error" id="Avatar-modal-error">
-            </span>
-            <!-- <input
-              class="modal__form-input"
-              type="text"
-              id="modal-card-image-input"
-              name="link"
-              required
-              placeholder="Image link"
-            />
-            <span
-              class="modal__error modal__error_visible"
-              id="modal-card-image-input-error"
-            >
-            </span> -->
-            <button
-              class="modal__button"
-              type="submit"
-              id="Avatar-modal-button"
-            >
-              Save
-            </button>
-          </fieldset>
+    <!--Profile-Avatar Image Change-->
+    <div class="modal" id="Profile-Avatar-edit-image-modal">
+      <div class="modal__container" id="Profile-Avatar-image-edit-container">
+        <button
+          class="modal__close"
+          id="Profile-Avatar-image-edit-close"
+        ></button>
+        <h2 class="modal__heading">Change profile picture</h2>
+        <form class="modal__form" id="Profile-Avatar-image-form" novalidate>
+          <input
+            class="modal__form-input"
+            name="Avatar"
+            id="Profile-Avatar-form-link"
+            type="link"
+            required
+            placeholder="Profile-Avatar-Image-link"
+          />
+          <span class="modal__error" id="Profile-Avatar-image-link-error">
+          </span>
+          <button class="modal__button">Save</button>
         </form>
       </div>
     </div>
-    <!--^Profile Image Change^-->
+    <!--^Profile-Avatar Image Change^-->
     <template id="card-template">
       <li class="card">
         <button class="card__delete-button" type="button"></button>
@@ -252,6 +196,7 @@
         <div class="card__description">
           <h2 class="card__title" id="card-title"></h2>
           <button class="card__like-button" type="button"></button>
+          <p class="card__likes-counter"></p>
         </div>
       </li>
     </template>

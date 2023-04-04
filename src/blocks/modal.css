@@ -186,6 +186,10 @@
   width: 430px;
 }
 
+/* .modal__text-delete {
+	margin-bottom: 38px;
+} */
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .modal__heading {
     font-size: 18px;
