@@ -7,6 +7,7 @@ import UserInfo from "../components/UserInfo.js";
 
 import "./index.css";
 
+
 import {
   initialCards,
   profileEditButton,
@@ -16,6 +17,20 @@ import {
   cardListElement,
   cardSelector,
 } from "../utils/constants.js";
+
+// import Api from "../utils/api.js"
+
+// fetch("https://around.nomoreparties.co/v1/group-12/cards", {
+//   headers: {
+//     authorization: "67d93972-468f-4c7a-bef5-b0ddeb015065"
+//     "Content-Type": "application/json",
+//   }
+// })
+// .then(res => res.json())
+// .then((result) => {
+//   console.log(result);
+// }); 
+
 
 /*----Validation----*/
 export const validationSettings = {
