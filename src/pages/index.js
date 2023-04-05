@@ -9,14 +9,18 @@ import UserInfo from "../components/UserInfo.js";
 import "./index.css";
 
 import {
-  validatingSettings,
-  initialCards,
+  validationSettings,
+  profileEditModal,
+  profileTitle,
+  profileDescription,
   profileEditButton,
   profileTitleInput,
   profileDescriptionInput,
+  addNewCardModal
   addNewCardButton,
-  cardListElement,
-  cardSelector,
+  avatarEditModal,
+  profileAvatar,
+  avatarButton,
 } from "../utils/constants.js";
 
 const api = new Api({
@@ -36,29 +40,38 @@ api
     console.error(err); // log the error to the console
   });
 
-/*----Validation----*/
-export const validationSettings = {
-  formSelector: ".modal__form",
-  inputSelector: ".modal__form-input",
-  submitButtonSelector: ".modal__button",
-  inactiveButtonClass: "modal__button_inactive",
-  inputErrorClass: "modal__form-input_error",
-  errorClass: "modal__error_visible",
-};
+// /*----Validation----*/
+// export const validationSettings = {
+//   formSelector: ".modal__form",
+//   inputSelector: ".modal__form-input",
+//   submitButtonSelector: ".modal__button",
+//   inactiveButtonClass: "modal__button_inactive",
+//   inputErrorClass: "modal__form-input_error",
+//   errorClass: "modal__error_visible",
+// };
 
 const editFormValidator = new FormValidator(
-  validationSettings,
-  document.querySelector("#profile-modal-form")
+  validationSettings,profileEditModal
 );
 editFormValidator.enableValidation();
 
 const addFormValidator = new FormValidator(
-  validationSettings,
-  document.querySelector("#modal-add-card-form")
+  validationSettings, addNewCardModal
 );
 addFormValidator.enableValidation();
 
+const avatarFormValidator = new FormValidator(
+  validationSettings, avatarEditModal
+);
+avatarFormValidator.enableValidation();
+
 /*----Class Constants----*/
+
+const userInfo = new UserInfo({
+  userName: ".profile__title",
+  userJob: ".profile__description",
+  userAvatar:".profileAvatar",
+});
 const editFormPopup = new PopupWithForm(
   "#profile-edit-modal",
   handleProfileFormSubmit
@@ -71,10 +84,10 @@ addFormPopup.setEventListeners();
 const imagePopup = new PopupWithImage("#card-image-modal");
 imagePopup.setEventListeners();
 
-const userInfo = new UserInfo({
-  nameSelector: ".profile__title",
-  descriptionSelector: ".profile__description",
-});
+// const userInfo = new UserInfo({
+//   nameSelector: ".profile__title",
+//   descriptionSelector: ".profile__description",
+// });
 
 const section = new Section(
   {

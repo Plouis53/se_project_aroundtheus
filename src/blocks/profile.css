@@ -86,8 +86,6 @@
   margin-right: 30px;
 }
 
-
-
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .profile {
     flex-direction: column;
@@ -133,5 +131,3 @@
     background-size: 16px;
   }
 }
-
-.pr
