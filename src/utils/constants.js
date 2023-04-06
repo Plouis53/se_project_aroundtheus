@@ -35,14 +35,14 @@ export const validationSettings = {
 };
 
 export const profileEditButton = document.querySelector(".profile__edit-button");
-export const profileEditModal = document.querySelector("#profile-edit-modal");
+export const profileEditModal = document.querySelector("#profile-edit-form");
 export const profileTitle = document.querySelector(".profile__title");
 export const profileDescription = document.querySelector(".profile__description");
 export const profileTitleInput = document.querySelector("#profile-title-input");
 export const profileDescriptionInput = document.querySelector("#profile-description-input");
 
-export const cardAddModal = document.querySelector("#card-add-modal");
-export const cardAddButton = document.querySelector(".profile__add-button");
+export const addNewCardModal = document.querySelector("#card-add-modal");
+export const addNewCardButton = document.querySelector(".profile__add-button");
 
 export const avatarEditModal = document.querySelector("#Profile-image-edit-modal");
 export const profileAvatar = document.querySelector(".profile__image");

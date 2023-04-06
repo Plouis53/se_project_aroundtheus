@@ -16,8 +16,8 @@ import {
   profileDescription,
   profileTitleInput,
   profileDescriptionInput,
-  cardAddModal,
-  cardAddButton,
+  addNewCardModal,
+  addNewCardButton,
   avatarEditModal,
   profileAvatar,
   avatarButton,
@@ -38,7 +38,7 @@ const editFormValidator = new FormValidator(
 );
 editFormValidator.enableValidation();
 
-const addFormValidator = new FormValidator(validationSettings, cardAddModal);
+const addFormValidator = new FormValidator(validationSettings, addNewCardModal);
 addFormValidator.enableValidation();
 
 const avatarFormValidator = new FormValidator(
@@ -179,5 +179,5 @@ const addCardPopup = new PopupWithForm("#card-add-modal", (values) => {
     });
 });
 
-cardAddButton.addEventListener("click", () => addCardPopup.open());
+addNewCardModal.addEventListener("click", () => addCardPopup.open());
 addCardPopup.setEventListeners();
