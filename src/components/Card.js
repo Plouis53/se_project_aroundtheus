@@ -1,6 +1,6 @@
 class Card {
   constructor(
-    data,
+    cardData,
     userId,
     cardSelector,
     handleCardClick,
@@ -8,17 +8,17 @@ class Card {
     handleLikeClick,
     loadingLikeCheck
   ) {
-    this._name = data.name;
-    this._link = data.link;
-    this._id = data._id;
-    this._likes = data.likes;
+    this._name = cardData.name;
+    this._link = cardData.link;
+    this._id = cardData._id;
+    this._likes = cardData.likes;
     this._cardSelector = cardSelector;
     this._handleCardClick = handleCardClick;
     this._handleDeleteClick = handleDeleteClick;
     this._handleLikeClick = handleLikeClick;
     this._loadingLikeCheck = loadingLikeCheck;
     this._userId = userId;
-    this._userCardOwnerId = data["owner"]._id;
+    this._userCardOwnerId = cardData["owner"]._id;
   }
 
   _getTemplate() {
@@ -27,7 +27,7 @@ class Card {
       .content.querySelector(".card")
       .cloneNode(true);
     return cardElement;
-  }
+  } 
 
   setCardEventListeners() {
     this._likeButton.addEventListener("click", () => {
