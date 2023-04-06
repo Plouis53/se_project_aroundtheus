@@ -1,10 +1,11 @@
-import Api from "../utils/api";
+import Api from "../utils/api.js";
 import Card from "../components/Card";
 import FormValidator from "../components/FormValidator";
 import PopupWithForm from "../components/PopupWithForm";
 import Section from "../components/Section.js";
 import PopupWithImage from "../components/PopupWithImage";
 import UserInfo from "../components/UserInfo.js";
+import PopupWithConfirmation from "../components/PopupWithConfirmation";
 import "./index.css";
 
 import {
@@ -21,7 +22,6 @@ import {
   profileAvatar,
   avatarButton,
 } from "../utils/constants.js";
-import PopupWithConfirmation from "../components/PopupWithConfirmation";
 
 const api = new Api({
   baseUrl: "https://around.nomoreparties.co/v1/group-12",
@@ -31,6 +31,7 @@ const api = new Api({
   },
 });
 
+/*----Validator----*/ 
 const editFormValidator = new FormValidator(
   validationSettings,
   profileEditModal
@@ -60,6 +61,8 @@ function openProfileEditForm() {
 }
 
 profileEditButton.addEventListener("click", openProfileEditForm);
+
+/*----Class Constants----*/ 
 
 const profilePopup = new PopupWithForm("#profile-edit-modal", (values) => {
   profilePopup.isLoadingButtonState(true);
