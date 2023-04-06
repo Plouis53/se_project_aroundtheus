@@ -28,6 +28,7 @@
             alt="=Avatar"
             class="profile__image"
           />
+          <button class="profile__image-edit" type="button"></button>
           <div class="profile__info">
             <h1 class="profile__title" id="profile-title">Jacques Cousteau</h1>
             <button
@@ -35,7 +36,9 @@
               id="profile-edit-button"
               type="button"
             ></button>
-            <p class="profile__description">Explorer</p>
+            <p class="profile__description" id="profile-description">
+              Explorer
+            </p>
           </div>
           <button
             class="profile__add-button"
@@ -56,10 +59,10 @@
       <div class="modal__container">
         <button
           class="modal__close"
-          id="profile-edit-close"
+          id="modal-close-button"
           type="button"
         ></button>
-        <form class="modal__form" id="profile-modal-form">
+        <form class="modal__form" id="profile-edit-form">
           <h2 class="modal__heading" id="modal-profile-heading">
             Edit profile
           </h2>
@@ -101,10 +104,10 @@
     <!--Add Modal-->
     <div class="modal" id="card-add-modal">
       <div class="modal__container">
-        <button class="modal__close" id="card-close-button"></button>
+        <button class="modal__close" id="card-add-close"></button>
         <form class="modal__form" id="modal-add-card-form">
-          <h2 class="modal__heading" id="modal-add-card-heading">New Place</h2>
-          <fieldset class="modal__form-fieldset" id="modal-add-card-fieldset">
+          <h2 class="modal__heading">New Place</h2>
+          <fieldset class="modal__form-fieldset" id="card-add-form">
             <input
               class="modal__form-input"
               type="text"
@@ -155,7 +158,7 @@
     </div>
     <!--^Modal Preview^-->
     <!--Delete Confirmation-->
-    <div class="modal" id="Delete-Confirm-modal">
+    <div class="modal" id="Delete-confirm-modal">
       <div class="modal__delete_container" id="Delete-confirm-container">
         <button class="modal__close" id="Delete-confirm-close"></button>
         <h2 class="modal__heading">Are you Sure?</h2>
@@ -165,25 +168,21 @@
       </div>
     </div>
     <!--^Delete Confirmation^-->
-    <!--Profile-Avatar Image Change-->
-    <div class="modal" id="Avatar-Form">
-      <div class="modal__container" id="Avatar-Form-container">
-        <button
-          class="modal__close"
-          id="Profile-Avatar-image-edit-close"
-        ></button>
+    <!--Profile-Image Change-->
+    <div class="modal" id="Profile-image-edit-modal">
+      <div class="modal__container" id="Profile-image-edit-container">
+        <button class="modal__close" id="Profile-image-edit-close"></button>
         <h2 class="modal__heading">Change profile picture</h2>
-        <form class="modal__form" id="Profile-Avatar-image-form" novalidate>
+        <form class="modal__form" id="Profile-image-form" novalidate>
           <input
             class="modal__form-input"
             name="Avatar"
-            id="Profile-Avatar-form-link"
+            id="Profile-image-link"
             type="link"
             required
-            placeholder="Profile-Avatar-Image-link"
+            placeholder="Profile Picture link"
           />
-          <span class="modal__error" id="Profile-Avatar-image-link-error">
-          </span>
+          <span class="modal__error" id="Profile-image-link-error"> </span>
           <button class="modal__button">Save</button>
         </form>
       </div>

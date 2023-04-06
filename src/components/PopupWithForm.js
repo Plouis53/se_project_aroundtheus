@@ -1,52 +1,42 @@
 import Popup from "./Popup.js";
 
 class PopupWithForm extends Popup {
-  constructor(popupSelector, handleFormSubmit, loadingButtonText) {
+  constructor(popupSelector, handleFormSubmit) {
     super({ popupSelector });
-
     this._popupForm = this._popupElement.querySelector(".modal__form");
-    this._formInputs = this._popupForm.querySelectorAll(".modal__form-input");
-    this._submitButton = this._popupElement.querySelector(".modal__button");
-    this._buttonText = this._submitButton.textContent;
-    this._loadingButtonText = loadingButtonText;
+    this._inputList = this._popupForm.querySelectorAll(".modal__form-input");
+    this._saveButton = this._popupForm.querySelector(".modal__button");
     this._handleFormSubmit = handleFormSubmit;
   }
 
+  isLoadingButtonState(isLoading, saveButtonText) {
+    if (isLoading) {
+      this._saveButton.textContent = "Saving...";
+    } else {
+      this._saveButton.textContent = saveButtonText;
+    }
+  }
+
   _getInputValues() {
-    const inputValues = {};
-    this._formInputs.forEach((input) => {
-      inputValues[input.name] = input.value;
+    this._formValues = {};
+    this._inputList.forEach((input) => {
+      this._formValues[input.name] = input.value;
     });
-    return inputValues;
-  }
 
-  _handleSubmit = (e) => {
-    e.preventDefault();
-    this._handleFormSubmit(this._getInputValues());
-  };
-
-  showLoading() {
-    this._submitButton.textContent = this._loadingButtonText;
-  }
-
-  hideLoading() {
-    this._submitButton.textContent = this._buttonText;
-  }
-
-  close() {
-    this._popupForm.reset();
-    super.close();
+    return this._formValues;
   }
 
   setEventListeners() {
     super.setEventListeners();
-    this._popupForm.addEventListener("submit", this._handleSubmit);
+    this._popupElement.addEventListener("submit", (e) => {
+      e.preventDefault();
+      this._handleFormSubmit(this._getInputValues());
+    });
   }
 
-  removeEventListeners() {
-    super.removeEventListeners();
-    this._popupForm.removeEventListener("submit", this._handleSubmit);
+  close() {
+    super.close();
+    this._popupForm.reset();
   }
 }
-
 export default PopupWithForm;
