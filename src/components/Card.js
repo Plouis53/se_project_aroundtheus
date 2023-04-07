@@ -29,7 +29,7 @@ class Card {
     return cardElement;
   } 
 
-  setCardEventListeners() {
+  setEventListeners() {
     this._likeButton.addEventListener("click", () => {
       this._handleLikeClick(this._id);
     });
@@ -98,7 +98,7 @@ class Card {
     if (this._userId != this._userCardOwnerId) {
       this._deleteButton.remove();
     }
-    this.setCardEventListeners();
+    this.setEventListeners();
     return this._cardElement;
   }
 }

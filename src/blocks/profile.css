@@ -93,8 +93,12 @@
   height: 26px;
   width: 26px;
   border: none;
-  left: 45px;
   grid-area: button;
+  align-self: center;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  display: grid;
+  margin-left: 40px;
 }
 
 .profile__image-edit:hover {
