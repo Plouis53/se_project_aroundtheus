@@ -52,6 +52,7 @@ class FormValidator {
   }
 
   _hasInvalidInput() {
+    // @ts-ignore
     return this._inputElements.some(
       (inputElement) => !inputElement.validity.valid
     );
@@ -74,6 +75,7 @@ class FormValidator {
   }
 
   resetValidation() {
+    // @ts-ignore
     this._inputElements.forEach((inputElement) => {
       this._hideInputError(inputElement);
     });
