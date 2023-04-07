@@ -179,5 +179,5 @@ const addCardPopup = new PopupWithForm("#card-add-modal", (values) => {
     });
 });
 
-addNewCardModal.addEventListener("click", () => addCardPopup.open());
+addNewCardButton.addEventListener("click", () => addCardPopup.open());
 addCardPopup.setEventListeners();
