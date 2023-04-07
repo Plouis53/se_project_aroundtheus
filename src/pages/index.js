@@ -31,7 +31,7 @@ const api = new Api({
   },
 });
 
-/*----Validator----*/ 
+/*----Validator----*/
 const editFormValidator = new FormValidator(
   validationSettings,
   profileEditModal
@@ -62,7 +62,7 @@ function openProfileEditForm() {
 
 profileEditButton.addEventListener("click", openProfileEditForm);
 
-/*----Class Constants----*/ 
+/*----Class Constants----*/
 
 const profilePopup = new PopupWithForm("#profile-edit-modal", (values) => {
   profilePopup.isLoadingButtonState(true);
@@ -179,5 +179,8 @@ const addCardPopup = new PopupWithForm("#card-add-modal", (values) => {
     });
 });
 
-addNewCardButton.addEventListener("click", () => addCardPopup.open());
+addNewCardButton.addEventListener("click", () => {
+  addFormValidator.resetValidation();
+  addCardPopup.open();
+});
 addCardPopup.setEventListeners();
