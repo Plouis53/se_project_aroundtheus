@@ -135,7 +135,7 @@ function createCard(cardData) {
     },
 
     (cardId) => {
-      if (card.checkCardLikeState()) {
+      if (card.isLiked()) {
         api.renderLikes(cardId).then((data) => {
           card.updateLikes(data.likes);
         });
@@ -200,8 +200,8 @@ const addCardPopup = new PopupWithForm("#card-add-modal", (values) => {
 });
 
 addNewCardButton.addEventListener("click", () => {
-  addFormValidator.disableButton();
-  // addFormValidator.resetValidation();
+  // addFormValidator.disableButton();
+  addFormValidator.resetValidation();
   addCardPopup.open();
 });
 addCardPopup.setEventListeners();
