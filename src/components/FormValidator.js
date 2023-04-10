@@ -51,6 +51,11 @@ class FormValidator {
     }
   }
 
+  disableButton() {
+    this._submitButton.disabled = true;
+    this._submitButton.classList.add(this._inactiveButtonClass);
+  }
+
   _hasInvalidInput() {
     // @ts-ignore
     return this._inputElements.some(
