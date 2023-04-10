@@ -9,15 +9,22 @@ class UserInfo {
     return {
       name: this._userName.textContent,
       about: this._userDescription.textContent,
-      avatar: this._userAvatar,
+      avatar: this.getAvatar(),
     };
   }
 
   setUserInfo(value) {
     this._userName.textContent = value.name;
     this._userDescription.textContent = value.about;
-    this._userAvatar.alt = value.name;
+  }
+
+  setAvatar(value) {
+    this._userAvatar.alt = this.getUserInfo();
     this._userAvatar.src = value.avatar;
+  }
+
+  getAvatar() {
+    return this._userAvatar.src;
   }
 }
 export default UserInfo;
