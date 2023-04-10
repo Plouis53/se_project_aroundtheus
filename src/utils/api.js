@@ -35,7 +35,12 @@ class Api {
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify(userData),
-    }).then(this._checkResponse);
+    })
+      .then(this._checkResponse)
+      .catch((error) => {
+        console.error("Error updating user profile:", error);
+        throw error;
+      });
   }
 
   addNewCard(cardData) {
@@ -43,8 +48,29 @@ class Api {
       method: "POST",
       headers: this._headers,
       body: JSON.stringify(cardData),
-    }).then(this._checkResponse);
+    })
+      .then(this._checkResponse)
+      .catch((error) => {
+        console.error("Error adding new card:", error);
+        throw error;
+      });
   }
+
+  // updateProfileInfo(userData) {
+  //   return fetch(`${this._baseUrl}/users/me`, {
+  //     method: "PATCH",
+  //     headers: this._headers,
+  //     body: JSON.stringify(userData),
+  //   }).then(this._checkResponse);
+  // }
+
+  // addNewCard(cardData) {
+  //   return fetch(`${this._baseUrl}/cards`, {
+  //     method: "POST",
+  //     headers: this._headers,
+  //     body: JSON.stringify(cardData),
+  //   }).then(this._checkResponse);
+  // }
 
   addCardLikes(cardId) {
     return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
