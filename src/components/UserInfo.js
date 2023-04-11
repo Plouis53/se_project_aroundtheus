@@ -20,7 +20,7 @@ class UserInfo {
 
   setAvatar(value) {
     this._userAvatar.alt = this.getUserInfo();
-    this._userAvatar.src = value.avatar;
+    this._userAvatar.src = value;
   }
 
   getAvatar() {
