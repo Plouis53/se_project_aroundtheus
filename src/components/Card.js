@@ -74,27 +74,6 @@ class Card {
     return this._likes.some((like) => like._id === this._userId);
   }
 
-  // setLikesCounter(likes) {
-  //   this._likes = likes;
-  //   this._cardLikes.textContent = likes;
-  // }
-
-  // addCardLike() {
-  //   this._likeButton.classList.add("card__like-button_active");
-  // }
-
-  // removeCardLike() {
-  //   this._likeButton.classList.remove("card__like-button_active");
-  // }
-
-  // checkCardLikeState() {
-  //   if (this._likeButton.classList.contains("card__like-button_active")) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
-
   getView() {
     this._cardElement = this._getTemplate();
 
