@@ -136,12 +136,12 @@ function createCard(cardData) {
 
     (cardId) => {
       if (card.isLiked()) {
-        api.renderLikes(cardId).then((data) => {
+        api.renderCardLikes(cardId).then((data) => {
           card.updateLikes(data.likes);
         });
       } else {
         api
-          .renderLikes(cardId)
+          .addCardLikes(cardId)
           .then((data) => {
             card.updateLikes(data.likes);
           })
@@ -168,6 +168,7 @@ function createCard(cardData) {
 api.getAPIInfo().then(([userData, userCards]) => {
   userId = userData._id;
   userInfo.setUserInfo(userData);
+  userInfo.setAvatar(userData.avatar);
   cardSection = new Section(
     {
       items: userCards,
@@ -200,8 +201,8 @@ const addCardPopup = new PopupWithForm("#card-add-modal", (values) => {
 });
 
 addNewCardButton.addEventListener("click", () => {
-  // addFormValidator.disableButton();
-  addFormValidator.resetValidation();
+  addFormValidator.disableButton();
+  // addFormValidator.resetValidation();
   addCardPopup.open();
 });
 addCardPopup.setEventListeners();
