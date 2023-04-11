@@ -101,9 +101,8 @@ const avatarPopup = new PopupWithForm("#Profile-image-edit-modal", (values) => {
 
   // avatarButton.addEventListener("click", () => avatarPopup.open());
   avatarFormValidator.disableButton();
-  avatarPopup.setEventListeners();
 });
-
+avatarPopup.setEventListeners();
 const previewPopup = new PopupWithImage("#card-image-modal");
 previewPopup.setEventListeners();
 
@@ -153,16 +152,6 @@ function createCard(cardData) {
     }
   );
   return card;
-
-  //   (cardData) => {
-  //     cardData.forEach((cardObject) => {
-  //       if (cardObject._id === userId) {
-  //         card.addCardLike();
-  //       }
-  //     });
-  //   }
-  // );
-  // return card;
 }
 
 api.getAppInfo().then(([userData, userCards]) => {
@@ -182,23 +171,26 @@ api.getAppInfo().then(([userData, userCards]) => {
   cardSection.renderItems();
 });
 
-const addCardPopup = new PopupWithForm("#card-add-modal", (values) => {
-  addCardPopup.renderLoading(true);
-  api
-    .addNewCard(values)
-    .then((cardData) => {
-      const addCard = createCard(cardData);
-      addCardPopup.close();
-      cardSection.addItem(addCard.getView());
-    })
-    .catch((err) => {
-      console.log(err);
-    })
+const addCardPopup = new PopupWithForm(
+  "#Profile-image-edit-modal",
+  (values) => {
+    addCardPopup.renderLoading(true);
+    api
+      .addNewCard(values)
+      .then((cardData) => {
+        const addCard = createCard(cardData);
+        addCardPopup.close();
+        cardSection.addItem(addCard.getView());
+      })
+      .catch((err) => {
+        console.log(err);
+      })
 
-    .finally(() => {
-      addCardPopup.renderLoading(false, "Create");
-    });
-});
+      .finally(() => {
+        addCardPopup.renderLoading(false, "Create");
+      });
+  }
+);
 
 addNewCardButton.addEventListener("click", () => {
   addFormValidator.disableButton();
