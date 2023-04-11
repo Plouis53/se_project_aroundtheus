@@ -172,18 +172,20 @@
     <div class="modal" id="Profile-image-edit-modal">
       <div class="modal__container-Profile" id="Profile-image-edit-container">
         <button class="modal__close" id="Profile-image-edit-close"></button>
-        <h2 class="modal__heading">Change profile picture</h2>
         <form class="modal__form" id="Profile-image-form">
-          <input
-            class="modal__form-input"
-            name="Avatar"
-            id="Profile-image-link"
-            type="link"
-            required
-            placeholder="Profile Picture link"
-          />
-          <span class="modal__error" id="Profile-image-link-error"> </span>
-          <button class="modal__button">Save</button>
+          <h2 class="modal__heading">Change profile picture</h2>
+          <fieldset class="modal__form-fieldset" id="Profile-form-fieldset">
+            <input
+              class="modal__form-input"
+              name="Avatar"
+              id="Profile-image-link"
+              type="link"
+              required
+              placeholder="Profile Picture link"
+            />
+            <span class="modal__error" id="Profile-image-link-error"> </span>
+            <button class="modal__button">Save</button>
+          </fieldset>
         </form>
       </div>
     </div>
