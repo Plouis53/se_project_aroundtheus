@@ -26,7 +26,7 @@ class Api {
     }).then(this._checkResponse);
   }
 
-  getAPIInfo() {
+  getAppInfo() {
     return Promise.all([this.getUserInfo(), this.getInitialCards()]);
   }
 

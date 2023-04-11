@@ -165,7 +165,7 @@ function createCard(cardData) {
   // return card;
 }
 
-api.getAPIInfo().then(([userData, userCards]) => {
+api.getAppInfo().then(([userData, userCards]) => {
   userId = userData._id;
   userInfo.setUserInfo(userData);
   userInfo.setAvatar(userData.avatar);
