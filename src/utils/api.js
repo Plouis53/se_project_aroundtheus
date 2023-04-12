@@ -56,22 +56,6 @@ class Api {
       });
   }
 
-  // updateProfileInfo(userData) {
-  //   return fetch(`${this._baseUrl}/users/me`, {
-  //     method: "PATCH",
-  //     headers: this._headers,
-  //     body: JSON.stringify(userData),
-  //   }).then(this._checkResponse);
-  // }
-
-  // addNewCard(cardData) {
-  //   return fetch(`${this._baseUrl}/cards`, {
-  //     method: "POST",
-  //     headers: this._headers,
-  //     body: JSON.stringify(cardData),
-  //   }).then(this._checkResponse);
-  // }
-
   addCardLikes(cardId) {
     return fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
       method: "PUT",
