@@ -93,7 +93,7 @@ class Card {
     // this._loadingLikeCheck(this._likes, this._likeButton);
     // this._cardLikes.textContent = this._likes.length;
 
-    if (this._userId === this._userCardOwnerId) {
+    if (this._userId != this._userCardOwnerId) {
       this._deleteButton.remove();
     }
     this.setCardEventListeners();
