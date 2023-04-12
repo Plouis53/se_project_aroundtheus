@@ -9,6 +9,7 @@ import PopupWithConfirmation from "../components/PopupWithConfirmation";
 import "./index.css";
 
 import {
+  initialCards,
   validationSettings,
   profileEditButton,
   profileEditModal,
@@ -172,7 +173,7 @@ api.getAppInfo().then(([userData, userCards]) => {
 });
 
 const addCardPopup = new PopupWithForm(
-  "#Profile-image-edit-modal",
+  "#card-add-modal",
   (values) => {
     addCardPopup.renderLoading(true);
     api
