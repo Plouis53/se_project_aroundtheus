@@ -177,27 +177,27 @@
   background-image: url(../images/Edit\ Button\ Icon.svg);
 }
 
-.modal__delete_container {
+/* #Delete-confirm-container {
   background-color: #fff;
   border-radius: 10px;
-  height: 181px;
+  height: 272px;
   margin: auto;
   position: relative;
   width: 430px;
-}
+} */
 
 .modal__text-delete {
   margin-bottom: 38px;
 }
 
-.modal__container-Profile {
+.modal__container-profile {
   background-color: #fff;
   margin: auto;
-  padding: 36px;
+  padding-bottom: 36px;
   border-radius: 10px;
   position: relative;
   width: 430px;
-  height: 272px;
+  /* height: 272px; */
 }
 
 #Delete-form-fieldset {
