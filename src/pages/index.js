@@ -87,7 +87,7 @@ avatarButton.addEventListener("click", () => avatarPopup.open());
 const avatarPopup = new PopupWithForm("#Profile-image-edit-modal", (values) => {
   avatarPopup.renderLoading(true);
   api
-    .updateProfileAvatar(values)
+    .updateProfileAvatar(values.avatar)
     .then((data) => {
       userInfo.setUserInfo(data);
       avatarPopup.close();
@@ -171,26 +171,23 @@ api.getAppInfo().then(([userData, userCards]) => {
   cardSection.renderItems();
 });
 
-const addCardPopup = new PopupWithForm(
-  "#card-add-modal",
-  (values) => {
-    addCardPopup.renderLoading(true);
-    api
-      .addNewCard(values)
-      .then((cardData) => {
-        const addCard = createCard(cardData);
-        addCardPopup.close();
-        cardSection.addItem(addCard.getView());
-      })
-      .catch((err) => {
-        console.log(err);
-      })
+const addCardPopup = new PopupWithForm("#card-add-modal", (values) => {
+  addCardPopup.renderLoading(true);
+  api
+    .addNewCard(values)
+    .then((cardData) => {
+      const addCard = createCard(cardData);
+      addCardPopup.close();
+      cardSection.addItem(addCard.getView());
+    })
+    .catch((err) => {
+      console.log(err);
+    })
 
-      .finally(() => {
-        addCardPopup.renderLoading(false, "Create");
-      });
-  }
-);
+    .finally(() => {
+      addCardPopup.renderLoading(false, "Create");
+    });
+});
 
 addNewCardButton.addEventListener("click", () => {
   addFormValidator.disableButton();
