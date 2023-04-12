@@ -9,7 +9,6 @@ import PopupWithConfirmation from "../components/PopupWithConfirmation";
 import "./index.css";
 
 import {
-  initialCards,
   validationSettings,
   profileEditButton,
   profileEditModal,
