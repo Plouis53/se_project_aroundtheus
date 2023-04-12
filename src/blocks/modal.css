@@ -233,6 +233,13 @@
     border-radius: 10px;
     margin: auto;
   }
+
+  #avatar-modal-heading {
+    font-size: 20px;
+    margin-bottom: 60px;
+    margin-left: 25px;
+    width: 230px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {

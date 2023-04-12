@@ -87,18 +87,19 @@
 }
 
 .profile__image-edit {
-  background: transparent url(../images/Profile\ Edit\ Vector.svg) center
-    no-repeat;
+  all: unset;
+  background: transparent url(../images/Profile\ Edit\ Vector.svg) center;
   position: absolute;
-  height: 26px;
-  width: 26px;
+  height: 120px;
+  width: 120px;
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: center;
   border: none;
-  grid-area: button;
-  align-self: center;
-  box-sizing: border-box;
-  border: 1px solid #fff;
-  display: grid;
-  margin-left: 40px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: ease-in-out 0.2s;
+  background-color: rgba(0, 0, 0, 0.825);
 }
 
 .profile__image-edit:hover {
