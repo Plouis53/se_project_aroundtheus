@@ -191,6 +191,8 @@ const addCardPopup = new PopupWithForm("#card-add-modal", (values) => {
 });
 
 addNewCardButton.addEventListener("click", () => {
+  avatarFormValidator.disableButton();
+  editFormValidator.disableButton();
   addFormValidator.disableButton();
   // addFormValidator.resetValidation();
   addCardPopup.open();
