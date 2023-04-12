@@ -200,16 +200,16 @@
   height: 272px;
 }
 
-/* #Profile-image-link {
-  padding-bottom: 4px;
-} */
+#Delete-form-fieldset {
+  margin-top: -41px;
+}
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .modal__heading {
     font-size: 24px;
     line-height: 21.78px;
     margin: 22px;
-    padding-bottom: 75px;
+    /* padding-bottom: 75px; */
     padding-left: 20px;
   }
 
