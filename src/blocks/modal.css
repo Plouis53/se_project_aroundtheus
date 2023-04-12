@@ -227,8 +227,8 @@
 
   .modal__container {
     position: relative;
-    width: 430px;
-    height: 330px;
+    width: 282px;
+    height: 322px;
     background-color: #fff;
     border-radius: 10px;
     margin: auto;
@@ -239,6 +239,15 @@
     margin-bottom: 60px;
     margin-left: 25px;
     width: 230px;
+  }
+
+  #modal-profile-heading{
+    display: flex;
+    justify-content: center;
+  }
+
+  #modal__form-fieldset{
+    margin: 0 22px;
   }
 }
 

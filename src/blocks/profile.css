@@ -133,6 +133,12 @@
   .profile__title {
     font-size: 22px;
     padding-top: 30px;
+    align-self: center;
+    justify-self: end;
+    margin: 0;
+    max-width: 204px;
+    padding-top: 26.25px;
+    text-align: center;
   }
 
   .profile__edit-button {
