@@ -69,8 +69,8 @@ const profilePopup = new PopupWithForm("#profile-edit-modal", (values) => {
   api
     .updateProfileInfo(values)
     .then((data) => {
-      // userInfo.setUserInfo(data);
-      userInfo.setAvatar(data);
+      userInfo.setUserInfo(data);
+      // userInfo.setAvatar(data);
       profilePopup.close();
     })
     .catch((err) => {
@@ -90,7 +90,8 @@ const avatarPopup = new PopupWithForm("#Profile-image-edit-modal", (values) => {
   api
     .updateProfileAvatar(values.avatar)
     .then((data) => {
-      userInfo.setUserInfo(data);
+      // userInfo.setUserInfo(data);
+      userInfo.setAvatar(data);
       avatarPopup.close();
     })
     .catch((err) => {
@@ -101,6 +102,7 @@ const avatarPopup = new PopupWithForm("#Profile-image-edit-modal", (values) => {
     });
 
   // avatarButton.addEventListener("click", () => avatarPopup.open());
+  avatarPopup.setEventListeners();
   avatarFormValidator.disableButton();
 });
 avatarPopup.setEventListeners();
@@ -128,7 +130,7 @@ function createCard(cardData) {
         deleteCardPopup.renderLoading(true);
         api.deleteUserCard(cardId).then(() => {
           card.deleteCard();
-          deleteCardPopup.renderLoading(true);
+          deleteCardPopup.renderLoading(false);
           deleteCardPopup.close();
         });
       });
