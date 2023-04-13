@@ -9,7 +9,6 @@ class UserInfo {
     return {
       name: this._userName.textContent,
       about: this._userDescription.textContent,
-      avatar: this.getAvatar(),
     };
   }
 
