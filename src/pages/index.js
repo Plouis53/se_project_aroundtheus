@@ -179,9 +179,9 @@ const addCardPopup = new PopupWithForm("#card-add-modal", (values) => {
   api
     .addNewCard(values)
     .then((cardData) => {
-      const addCard = createCard(cardData);
+      const card = createCard(cardData);
       addCardPopup.close();
-      cardSection.addItem(addCard.getView());
+      cardSection.addItem(card.getView());
     })
     .catch((err) => {
       console.log(err);
