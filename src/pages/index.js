@@ -54,9 +54,9 @@ const userInfo = new UserInfo({
 });
 
 function openProfileEditForm() {
-  const { name, job } = userInfo.getUserInfo();
+  const { name, about } = userInfo.getUserInfo();
   profileTitleInput.value = name;
-  profileDescriptionInput.value = job;
+  profileDescriptionInput.value = about;
   profilePopup.open();
 }
 
