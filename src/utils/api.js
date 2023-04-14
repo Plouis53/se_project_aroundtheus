@@ -39,10 +39,6 @@ class Api {
         about: userData.about,
       }),
     }).then(this._checkResponse);
-    // .catch((error) => {
-    //   console.error("Error updating user profile:", error);
-    //   throw error;
-    // });
   }
 
   addNewCard(cardData) {
@@ -51,10 +47,6 @@ class Api {
       headers: this._headers,
       body: JSON.stringify(cardData),
     }).then(this._checkResponse);
-    // .catch((error) => {
-    //   console.error("Error adding new card:", error);
-    //   throw error;
-    // });
   }
 
   addCardLikes(cardId) {
@@ -74,7 +66,9 @@ class Api {
   updateProfileAvatar(avatar) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: "PATCH",
+
       headers: this._headers,
+
       body: JSON.stringify({ avatar }),
     }).then(this._checkResponse);
   }

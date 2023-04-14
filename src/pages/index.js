@@ -85,13 +85,12 @@ profilePopup.setEventListeners();
 
 avatarButton.addEventListener("click", () => avatarPopup.open());
 
-const avatarPopup = new PopupWithForm("#Profile-image-edit-modal", (values) => {
+const avatarPopup = new PopupWithForm("#Profile-image-edit-modal", (value) => {
   avatarPopup.renderLoading(true);
   api
-    .updateProfileAvatar(values.avatar)
-    .then((data) => {
-      // userInfo.setUserInfo(data);
-      userInfo.setAvatar(data);
+    .updateProfileAvatar(value.avatar)
+    .then((value) => {
+      userInfo.setAvatar(value.avatar);
       avatarPopup.close();
     })
     .catch((err) => {
@@ -101,7 +100,6 @@ const avatarPopup = new PopupWithForm("#Profile-image-edit-modal", (values) => {
       avatarPopup.renderLoading(false, "Save");
     });
 
-  // avatarButton.addEventListener("click", () => avatarPopup.open());
   avatarPopup.setEventListeners();
   avatarFormValidator.disableButton();
 });
