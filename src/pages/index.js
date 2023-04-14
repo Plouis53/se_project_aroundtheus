@@ -76,9 +76,9 @@ const profilePopup = new PopupWithForm("#profile-edit-modal", (values) => {
     .catch((err) => {
       console.log(err);
     })
-    .finally(() => {
-      profilePopup.renderLoading(false, "Save");
-    });
+    // .finally(() => {
+    //   profilePopup.renderLoading(false, "Save");
+    // });
 });
 
 profilePopup.setEventListeners();
@@ -97,9 +97,9 @@ const avatarPopup = new PopupWithForm("#Profile-image-edit-modal", (values) => {
     .catch((err) => {
       console.log(err);
     })
-    .finally(() => {
-      avatarPopup.renderLoading(false, "Save");
-    });
+    // .finally(() => {
+    //   avatarPopup.renderLoading(false, "Save");
+    // });
 
   // avatarButton.addEventListener("click", () => avatarPopup.open());
   avatarPopup.setEventListeners();
