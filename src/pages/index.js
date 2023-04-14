@@ -128,18 +128,11 @@ function createCard(cardData) {
       deleteCardPopup.setSubmitAction(() => {
         deleteCardPopup.renderLoading(true);
 
-        api
-          .deleteUserCard(cardId)
-          .then(() => {
-            card.deleteCard();
-            deleteCardPopup.close();
-          })
-          .catch((err) => {
-            console.log(err);
-          })
-          .finally(() => {
-            deleteCardPopup.renderLoading(false);
-          });
+        api.deleteUserCard(cardId).then(() => {
+          card.deleteCard();
+          deleteCardPopup.renderLoading(false);
+          deleteCardPopup.close();
+        });
       });
     },
 
