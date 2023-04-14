@@ -99,10 +99,11 @@ const avatarPopup = new PopupWithForm("#Profile-image-edit-modal", (value) => {
     .finally(() => {
       avatarPopup.renderLoading(false, "Save");
     });
-
-  avatarPopup.setEventListeners();
-  avatarFormValidator.disableButton();
 });
+
+avatarPopup.setEventListeners();
+avatarFormValidator.disableButton();
+
 avatarPopup.setEventListeners();
 const previewPopup = new PopupWithImage("#card-image-modal");
 previewPopup.setEventListeners();
