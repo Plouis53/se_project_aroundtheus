@@ -38,24 +38,23 @@ class Api {
         name: userData.name,
         about: userData.about,
       }),
-    })
-      .then(this._checkResponse)
-      // .catch((error) => {
-      //   console.error("Error updating user profile:", error);
-      //   throw error;
-      // });
+    }).then(this._checkResponse);
+    // .catch((error) => {
+    //   console.error("Error updating user profile:", error);
+    //   throw error;
+    // });
   }
 
-  addNewCard(name, link) {
+  addNewCard(cardData) {
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
       headers: this._headers,
-      body: JSON.stringify({ name, link}),
-     }) .then(this._checkResponse)
-      // .catch((error) => {
-      //   console.error("Error adding new card:", error);
-      //   throw error;
-      // });
+      body: JSON.stringify(cardData),
+    }).then(this._checkResponse);
+    // .catch((error) => {
+    //   console.error("Error adding new card:", error);
+    //   throw error;
+    // });
   }
 
   addCardLikes(cardId) {
