@@ -130,7 +130,7 @@ function createCard(cardData) {
         deleteCardPopup.renderLoading(true);
         api.deleteUserCard(cardId).then(() => {
           card.deleteCard();
-          deleteCardPopup.renderLoading(false);
+          // deleteCardPopup.renderLoading(false);
           deleteCardPopup.close();
         });
       });
