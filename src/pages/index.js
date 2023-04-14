@@ -75,10 +75,10 @@ const profilePopup = new PopupWithForm("#profile-edit-modal", (values) => {
     })
     .catch((err) => {
       console.log(err);
+    })
+    .finally(() => {
+      profilePopup.renderLoading(false, "Save");
     });
-  // .finally(() => {
-  //   profilePopup.renderLoading(false, "Save");
-  // });
 });
 
 profilePopup.setEventListeners();
