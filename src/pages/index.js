@@ -82,7 +82,7 @@ const profilePopup = new PopupWithForm("#profile-edit-modal", (values) => {
 });
 
 profilePopup.setEventListeners();
-
+editFormValidator.disableButton();
 avatarButton.addEventListener("click", () => avatarPopup.open());
 
 const avatarPopup = new PopupWithForm("#Profile-image-edit-modal", (value) => {
@@ -102,9 +102,8 @@ const avatarPopup = new PopupWithForm("#Profile-image-edit-modal", (value) => {
 });
 
 avatarPopup.setEventListeners();
-avatarFormValidator.disableButton();
+// avatarFormValidator.disableButton();
 
-avatarPopup.setEventListeners();
 const previewPopup = new PopupWithImage("#card-image-modal");
 previewPopup.setEventListeners();
 
@@ -128,11 +127,17 @@ function createCard(cardData) {
       deleteCardPopup.setSubmitAction(() => {
         deleteCardPopup.renderLoading(true);
 
-        api.deleteUserCard(cardId).then(() => {
-          card.deleteCard();
-          deleteCardPopup.renderLoading(false);
-          deleteCardPopup.close();
-        });
+        api
+          .deleteUserCard(cardId)
+          .then(() => {
+            card.deleteCard();
+            deleteCardPopup.renderLoading(false);
+            deleteCardPopup.close();
+          })
+
+          .catch((err) => {
+            console.log(err);
+          });
       });
     },
 
