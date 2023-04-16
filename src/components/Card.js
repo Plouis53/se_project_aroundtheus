@@ -43,10 +43,6 @@ class Card {
     });
   }
 
-  // _handleCardLike() {
-  //   this._likeButton.classList.toggle("card__like-button_active");
-  // }
-
   _handleImageClick() {
     this._handleCardClick(this._name, this._link);
   }
@@ -90,8 +86,6 @@ class Card {
 
     this._cardLikes = this._cardElement.querySelector(".card__likes-counter");
     this.renderLikes();
-    // this._loadingLikeCheck(this._likes, this._likeButton);
-    // this._cardLikes.textContent = this._likes.length;
 
     if (this._userId != this._userCardOwnerId) {
       this._deleteButton.remove();

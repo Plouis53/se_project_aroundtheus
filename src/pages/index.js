@@ -168,7 +168,7 @@ function createCard(cardData) {
       }
     }
   );
-  return card;
+  return card.getView();
 }
 
 api
@@ -182,7 +182,7 @@ api
         items: userCards,
         renderer: (cardData) => {
           const newCard = createCard(cardData);
-          cardSection.addItem(newCard.getView());
+          cardSection.addItem(newCard());
         },
       },
       ".cards__list"
