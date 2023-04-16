@@ -137,7 +137,11 @@ function createCard(cardData) {
 
           .catch((err) => {
             console.log(err);
-          });
+          })
+
+        .finally(() => {
+          deleteCardPopup.renderLoading(false);
+        })
       });
     },
 
