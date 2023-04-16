@@ -139,9 +139,9 @@ function createCard(cardData) {
             console.log(err);
           })
 
-        .finally(() => {
-          deleteCardPopup.renderLoading(false);
-        })
+          .finally(() => {
+            deleteCardPopup.renderLoading(false);
+          });
       });
     },
 
@@ -182,7 +182,7 @@ api
         items: userCards,
         renderer: (cardData) => {
           const newCard = createCard(cardData);
-          cardSection.addItem(newCard());
+          cardSection.addItem(newCard);
         },
       },
       ".cards__list"
@@ -200,7 +200,7 @@ const addCardPopup = new PopupWithForm("#card-add-modal", (values) => {
     .then((cardData) => {
       const card = createCard(cardData);
       addCardPopup.close();
-      cardSection.addItem(card.getView());
+      cardSection.addItem(card);
     })
     .catch((err) => {
       console.log(err);
