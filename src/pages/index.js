@@ -60,6 +60,7 @@ function openProfileEditForm() {
   profilePopup.open();
 }
 
+editFormValidator.disableButton();
 profileEditButton.addEventListener("click", openProfileEditForm);
 
 /*----Class Constants----*/
@@ -82,7 +83,6 @@ const profilePopup = new PopupWithForm("#profile-edit-modal", (values) => {
 });
 
 profilePopup.setEventListeners();
-editFormValidator.disableButton();
 avatarButton.addEventListener("click", () => avatarPopup.open());
 
 const avatarPopup = new PopupWithForm("#Profile-image-edit-modal", (value) => {
@@ -131,7 +131,6 @@ function createCard(cardData) {
           .deleteUserCard(cardId)
           .then(() => {
             card.deleteCard();
-            deleteCardPopup.renderLoading(false);
             deleteCardPopup.close();
           })
 
