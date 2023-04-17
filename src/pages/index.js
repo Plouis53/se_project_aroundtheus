@@ -58,9 +58,10 @@ function openProfileEditForm() {
   profileTitleInput.value = name;
   profileDescriptionInput.value = about;
   profilePopup.open();
+
+  editFormValidator.disableButton();
 }
 
-editFormValidator.disableButton();
 profileEditButton.addEventListener("click", openProfileEditForm);
 
 /*----Class Constants----*/
