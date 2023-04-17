@@ -54,7 +54,6 @@
 .modal__close:hover {
   opacity: 0.6;
   cursor: pointer;
-  transition: 05s;
 }
 
 .modal__heading {
@@ -99,7 +98,7 @@
   font-family: "Inter", Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
-  border-radius: 2px;
+  border: none;
   margin-top: 40px;
   padding: 0;
 }
@@ -241,12 +240,12 @@
     width: 230px;
   }
 
-  #modal-profile-heading{
+  #modal-profile-heading {
     display: flex;
     justify-content: center;
   }
 
-  #modal__form-fieldset{
+  #modal__form-fieldset {
     margin: 0 22px;
   }
 }
